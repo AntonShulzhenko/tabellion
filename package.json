@@ -1,0 +1,8 @@
+{
+  "name": "tabellion",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/AntonShulzhenko/tabellion.git",
+  "author": "Anton SHulzhenko <shulzhenkomailbox@gmail.com>",
+  "license": "MIT"
+}
