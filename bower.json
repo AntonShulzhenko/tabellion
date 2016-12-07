@@ -1,0 +1,17 @@
+{
+  "name": "tabellion",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "Anton SHulzhenko <shulzhenkomailbox@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/AntonShulzhenko/tabellion",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
