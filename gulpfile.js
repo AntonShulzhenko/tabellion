@@ -10,6 +10,7 @@ const gulpif       = require('gulp-if');
 const uglify       = require('gulp-uglify');
 const concat       = require('gulp-concat');
 const useref       = require('gulp-useref');
+const cache        = require('gulp-cache');
 
 var src = {
   scss: 'src/scss/**/*.scss',
@@ -22,13 +23,22 @@ var src = {
 
 gulp.task('libs', () => {
   return gulp.src([src.nm + '/bootstrap-sass/assets/javascripts/bootstrap.min.js', src.nm + '/jquery/dist/jquery.min.js'])
-    .pipe(gulp.dest('src/libs'))
+    .pipe(gulp.dest('src/libs'));
 });
 
 
 gulp.task('fonts', function() {
   return gulp.src('src/fonts/**/*')
-    .pipe(gulp.dest('build/fonts'))
+    .pipe(gulp.dest('build/fonts'));
+});
+
+
+gulp.task('images', function() {
+  return gulp.src('src/img/**/*.+(png|jpg|gif|svg)')
+  .pipe(cache(imagemin({
+    interlaced: true
+  })))
+  .pipe(gulp.dest('build/img'));
 });
 
 
@@ -71,4 +81,4 @@ gulp.task('build', () => {
     .pipe(gulp.dest('build'));
 });
 
-gulp.task('default', ['serve', 'libs', 'js']);
+gulp.task('default', ['serve', 'libs', 'js', 'build', 'fonts', 'images']);
