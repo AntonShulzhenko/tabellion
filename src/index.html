@@ -2,8 +2,10 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Tabellion</title>
-    <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <!-- <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css"> -->
 
     <!-- build:css css/vendor.min.css -->
     <!-- Сюда билдим библиотеки (бутстрап и т.д.) -->
@@ -18,13 +20,29 @@
     <!-- endbuild -->
   </head>
   <body>
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-8 col-sm-offset-2">
-          <h2>khjhgjhg</h2>
-        </div>
-      </div>
-    </div>
+    <header class="header">
+      <div class="header__logo">Табелліон</div>
+
+      <ul class="contacts">
+        <li class="contacts__item contacts__item_location">пров. Музейний, буд. 10, оф. 505</li>
+        <li class="contacts__item contacts__item_phone">093-625-0000</li>
+      </ul>
+    </header>
+
+    <nav class="nav">
+      <ul class="nav__list">
+        <li class="nav__item"><a href="#" class="nav__link">Послуги</a></li>
+        <li class="nav__item"><a href="#" class="nav__link">Про нас</a></li>
+        <li class="nav__item"><a href="#" class="nav__link">Питання - відповідь</a></li>
+        <li class="nav__item"><a href="#" class="nav__link">Контакти</a></li>
+      </ul>
+
+      <a href="#" class="nav__link nav__link_ask">Відправити запитання</a>
+    </nav>
+
+    <article class="main">
+      <a href="#" class="go-top"></a>
+    </article>
 
     <!-- build:js js/vendor.min.js -->
     <script src="libs/jquery.min.js"></script>

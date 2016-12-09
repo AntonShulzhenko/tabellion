@@ -1,0 +1,30 @@
+.contacts {
+  list-style: none;
+  overflow: hidden;
+  display: flex;
+  justify-content: flex-end;
+  &__item {
+    min-width: 280px;
+    margin-left: 85px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid rgba(set-color('grey'), 0.37);
+    text-align: right;
+    font-family: $main-font;
+    font-weight: 700;
+    line-height: 26px;
+    color: set-color('grey');
+    &_phone {
+      font-size: 24px;
+    }
+  }
+}
+
+.go-top {
+  display: block;
+  width: 75px;
+  height: 50px;
+  background-color: set-color('black');
+  position: fixed;
+  right: 80px;
+  bottom: 80px;
+}

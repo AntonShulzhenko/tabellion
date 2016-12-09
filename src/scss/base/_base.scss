@@ -10,7 +10,8 @@ body {
   overflow-x: hidden;
   margin-left: auto;
   margin-right: auto;
-  font-family: $main-font;
+  font-family: $content-font;
+  font-size: $font-size;
   color: set-color('black');
-  background-color: set-color('accent');
+  background-color: set-color('white');
 }
