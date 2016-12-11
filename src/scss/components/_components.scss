@@ -28,3 +28,19 @@
   right: 80px;
   bottom: 80px;
 }
+
+.button {
+  font-family: $main-font;
+  font-weight: 700;
+  color: set-color('white');
+  text-align: center;
+  background-color: set-color('black');
+  padding: 20px 50px;
+  transition: all 0.25s ease;
+  &:hover,
+  &:active,
+  &:focus {
+    background-color: set-color('white');
+    color: set-color('black');
+  }
+}

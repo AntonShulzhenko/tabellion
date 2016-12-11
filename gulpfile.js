@@ -70,6 +70,7 @@ gulp.task('serve', ['styles'], () => {
   gulp.watch(src.scss, ['styles']);
   gulp.watch(src.js, ['js']).on('change', reload);
   gulp.watch(src.html).on('change', reload);
+  gulp.watch('src/img/**/*.+(png|jpg|gif|svg)').on('change', reload);
 });
 
 
