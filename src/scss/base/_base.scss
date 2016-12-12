@@ -15,30 +15,32 @@ body {
   color: set-color('black');
   background-color: set-color('white');
 }
-@for $i from 1 through 6 {
-  #{h}#{$i} {
-    font-family: $main-font;
-    font-weight: 700;
-    line-height: 1;
-    color: set-color('black');
-    text-transform: uppercase;
-    position: relative;
-    margin: 0;
-    padding-left: 27px;
-    &::before {
-      content: "";
-      display: block;
-      width: 6px;
-      height: 100%;
-      background-color: set-color('accent');
-      position: absolute;
-      left: 0;
-      top: 0;
-    }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $main-font;
+  font-weight: 700;
+  line-height: 1;
+  color: set-color('black');
+  text-transform: uppercase;
+  position: relative;
+  margin: 0;
+  padding-left: 27px;
+  &::before {
+    content: "";
+    display: block;
+    width: 6px;
+    height: 100%;
+    background-color: set-color('accent');
+    position: absolute;
+    left: 0;
+    top: 0;
   }
 }
 p {
   font-family: $content-font;
   font-size: $font-size;
   color: set-color('black');
+}
+.margin-left-45 {
+  margin-left: 45px;
 }

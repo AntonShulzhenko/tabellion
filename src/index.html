@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Tabellion</title>
-    <!-- <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css"> -->
+    <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
 
     <!-- build:css css/vendor.min.css -->
     <!-- Сюда билдим библиотеки (бутстрап и т.д.) -->
@@ -21,7 +21,7 @@
   </head>
   <body>
     <header class="header">
-      <div class="header__logo">Табелліон</div>
+      <a rhef="#" class="header__logo">Табелліон</a>
 
       <ul class="contacts">
         <li class="contacts__item contacts__item_location">пров. Музейний, буд. 10, оф. 505</li>
@@ -35,18 +35,17 @@
         <li class="nav__item"><a href="#" class="nav__link">Про нас</a></li>
         <li class="nav__item"><a href="#" class="nav__link">Питання - відповідь</a></li>
         <li class="nav__item"><a href="#" class="nav__link">Контакти</a></li>
+        <li class="nav__item"><a href="#" class="nav__link nav__link_ask">Відправити запитання</a></li>
       </ul>
-
-      <a href="#" class="nav__link nav__link_ask">Відправити запитання</a>
     </nav>
 
     <article class="main">
       <section class="first">
-        <div class="container">
+        <div class="container-fluid">
           <h1 class="first__h1">Нотаріальні<br> послуги в центрі Києва</h1>
 
           <div class="row">
-            <div class="col-sm-6">
+            <div class="col-sm-5">
               <div class="first__services">
                 <ul class="first__ul">
                   <li class="first__li">Послуги для населення</li>
@@ -58,14 +57,22 @@
               </div>
             </div>
 
-            <div class="col-sm-6">
+            <div class="col-sm-4">
+              <p class="first__lead margin-left-45"><span>Швидке рішення</span> <span>нотаріальних питань</span></p>
 
+              <div class="first__services-amount margin-left-45">
+                <span>більше</span>
+                <span>50</span>
+                <span>послуг</span>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      <a href="#" class="go-top"></a>
+      <a href="#" class="go-top">
+        <i class="fa fa-long-arrow-up" aria-hidden="true"></i>
+      </a>
     </article>
 
     <!-- build:js js/vendor.min.js -->

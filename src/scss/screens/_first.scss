@@ -1,22 +1,110 @@
 .first {
   width: 100%;
-  height: calc(100vh - 144px);
+  height: calc(100vh - 100px);
   overflow: hidden;
-  background: {
-    image: url('../img/first-screen-bg.jpg');
-    position: right -124px;
-    repeat: no-repeat;
+  position: relative;
+  &::after {
+    content: "";
+    display: block;
+    width: 70%;
+    height: 100%;
+    max-height: 830px;
+    background: {
+      image: url('../img/first-screen-bg.jpg');
+      position: center;
+      repeat: no-repeat;
+      size: cover;
+    }
+    position: absolute;
+    right: 0;
+    top: -17px;
+    z-index: 0;
+  }
+  .container-fluid {
+    position: relative;
+    z-index: 2;
   }
   &__h1 {
     font-size: 68px;
-    line-height: 98px;
+    line-height: 90px;
     letter-spacing: 10px;
     margin-bottom: 80px;
+    margin-left: 60px;
     padding-left: 40px;
     &::before {
       width: 11px;
       height: calc(100% - 47px);
       top: 23px;
+    }
+  }
+  &__services {
+    width: 100%;
+    max-width: 525px;
+    background-color: set-color('accent');
+    margin-left: 100px;
+    padding: 80px 200px 0 100px;
+    box-shadow: 10px 10px 0 0 rgba(set-color('grey'), 0.16);
+  }
+  &__ul {
+    list-style: none;
+    margin-bottom: 75px;
+    padding: 0;
+  }
+  &__li {
+    font-family: $main-font;
+    font-size: 24px;
+    line-height: 30px;
+    font-weight: 700;
+    color: set-color('black');
+    margin-bottom: 60px;
+    padding-bottom: 10px;
+    border-bottom: 3px solid rgba(set-color('black'), 0.05);
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  &__lead {
+    margin-top: 70px;
+    margin-bottom: 90px;
+    font-size: 36px;
+    font-family: $main-font;
+    font-weight: 700;
+    line-height: 48px;
+    color: set-color('black');
+    position: relative;
+    z-index: 2;
+    span {
+      display: inline-block;
+      position: relative;
+      &::before {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 16px;
+        background-color: set-color('accent');
+        position: absolute;
+        bottom: 2px;
+        left: 0;
+        z-index: -1;
+      }
+    }
+  }
+  &__services-amount {
+    max-width: 160px;
+    span {
+      display: block;
+      font-family: $main-font;
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 1;
+      text-transform: uppercase;
+      text-align: center;
+      color: set-color('black');
+      letter-spacing: 10px;
+      &:nth-child(2) {
+        color: set-color('grey');
+        font-size: 130px;
+      }
     }
   }
 }

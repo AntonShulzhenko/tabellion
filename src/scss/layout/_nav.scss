@@ -15,9 +15,21 @@
     padding: 0;
     margin: 0 0 24px;
     list-style: none;
+    &:hover {
+      .nav__link {
+        text-decoration: none;
+        color: set-color('black');
+        &:not(:hover) {
+          opacity: 0.3;
+        }
+      }
+    }
   }
   &__item {
     margin-bottom: 40px;
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
   &__link {
     display: block;
@@ -48,18 +60,16 @@
     }
     &_ask {
       width: 100%;
+      margin-top: 65px;
       &::after {
         content: "";
-      }
-    }
-  }
-  &:hover {
-    .nav__link {
-      text-decoration: none;
-      color: set-color('black');
-      border-color: set-color('black');
-      &:not(:hover) {
-        opacity: 0.3;
+        box-shadow: none;
+        background: {
+          image: url(../img/email-svg.svg);
+          repeat: no-repeat;
+          size: contain;
+          position: center;
+        }
       }
     }
   }

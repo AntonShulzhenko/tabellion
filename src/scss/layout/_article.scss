@@ -1,6 +1,17 @@
 .main {
   width: 100%;
-  padding: 144px 0 0 0;
+  padding: 100px 0 0 260px;
   position: relative;
   background-color: set-color('white');
+  &::before {
+    content: "T";
+    font-family: $main-font;
+    font-size: 1200px;
+    line-height: 740px;
+    font-weight: 700;
+    color: set-color('light-grey');
+    position: absolute;
+    left: 40px;
+    top: 130px;
+  }
 }
