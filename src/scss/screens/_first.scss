@@ -1,12 +1,13 @@
 .first {
   width: 100%;
-  height: calc(100vh - 100px);
+  height: 100%;
   overflow: hidden;
   position: relative;
+  padding-bottom: 145px;
   &::after {
     content: "";
     display: block;
-    width: 70%;
+    width: 69%;
     height: 100%;
     max-height: 830px;
     background: {
@@ -29,7 +30,7 @@
     line-height: 90px;
     letter-spacing: 10px;
     margin-bottom: 80px;
-    margin-left: 60px;
+    margin-left: 0;
     padding-left: 40px;
     &::before {
       width: 11px;
@@ -41,7 +42,7 @@
     width: 100%;
     max-width: 525px;
     background-color: set-color('accent');
-    margin-left: 100px;
+    margin-left: 30px;
     padding: 80px 200px 0 100px;
     box-shadow: 10px 10px 0 0 rgba(set-color('grey'), 0.16);
   }

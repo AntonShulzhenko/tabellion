@@ -59,6 +59,7 @@
   line-height: 50px;
   font-size: 18px;
   transition: all 0.25s ease;
+  z-index: 999;
   &:hover,
   &:focus,
   &:active {
