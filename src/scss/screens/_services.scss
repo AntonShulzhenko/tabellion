@@ -3,14 +3,31 @@
   padding-bottom: 90px;
   display: flex;
   justify-content: flex-start;
+  position: relative;
+  overflow: hidden;
+  &::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: set-color('light-grey');
+    position: absolute;
+    left: 370px;
+    top: 275px;
+  }
   &__sidebar {
     width: 220px;
     margin-right: 65px;
+    padding-top: 55px;
     background-color: set-color('white');
   }
   &__content {
     width: 100%;
     max-width: 940px;
+    position: relative;
+  }
+  &__tabs {
+    background-color: set-color('light-grey');
   }
   &__logo {
     max-width: 60px;
@@ -144,8 +161,53 @@
     }
   }
   &__tab-content {
-    background-color: set-color('light-grey');
     padding: 0 25px;
+    > .services__tab-pane.active {
+      display: flex;
+    }
+  }
+  &__tab-pane {
+    padding: 0 15px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  &__tab-pane-item {
+    width: 220px;
+    min-height: 85px;
+    margin-bottom: 60px;
+    border-bottom: 1px solid rgba(set-color('black'), 0.37);
+    position: relative;
+    &.last {
+      opacity: 0;
+      visibility: collapse;
+      height: 0;
+      min-height: 0;
+      margin: 0;
+    }
+  }
+  &__tab-pane-link {
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 22px;
+    color: set-color('black');
+    margin-bottom: 20px;
+    &:hover,
+    &:active,
+    &:focus {
+      color: set-color('black');
+    }
+  }
+  &__tab-pane-price {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 25px;
+    color: set-color('black');
+    margin-bottom: 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
   }
   &__more {
     padding: 70px  90px;
@@ -160,18 +222,77 @@
       color: set-color('black');
       border-bottom: 1px dashed set-color('black');
       position: relative;
+      transition: all 0.25s ease;
       &::after {
-        content: "";
+        content: "\f3d4";
         margin-top: 10px;
         font-family: "Ionicons";
         font-size: 30px;
         font-weight: 300;
         line-height: 1;
+        display: block;
+        position: absolute;
+        left: 50%;
+        transform: translate3d(-50%, 0, 0);
+        transition: all 0.25s ease;
+      }
+      &:hover,
+      &:active,
+      &:focus {
+        text-decoration: none;
+        color: set-color('black');
+        border-color: transparent;
+        &::after {
+          color: set-color('accent');
+          transform: translate3d(-50%, 10px, 0);
+        }
       }
     }
   }
   .scroll-container {
-    max-height: 740px;
-    background-color: set-color('light-grey');
+    height: 740px;
+    margin-top: 60px;
+    .jspVerticalBar {
+      width: 10px;
+      background-color: transparent;
+    }
+    .jspTrack {
+      background-color: transparent;
+      opacity: 1;
+      &::before {
+        content: "";
+        display: block;
+        width: 1px;
+        height: 100%;
+        background-color: set-color('black');
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+    .jspDrag {
+      background-color: set-color('grey');
+      border-radius: 5px;
+      position: relative;
+      &::before,
+      &::after {
+        display: block;
+        font-family: "Ionicons";
+        font-size: 12px;
+        color: set-color('accent');
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      &::before {
+        content: "\f365";
+        top: 0;
+      }
+      &::after {
+        content: "\f35f";
+        bottom: 0;
+      }
+    }
   }
 }
