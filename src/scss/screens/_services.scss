@@ -159,6 +159,15 @@
       line-height: 30px;
       color: set-color('black');
       border-bottom: 1px dashed set-color('black');
+      position: relative;
+      &::after {
+        content: "";
+        margin-top: 10px;
+        font-family: "Ionicons";
+        font-size: 30px;
+        font-weight: 300;
+        line-height: 1;
+      }
     }
   }
   .scroll-container {
