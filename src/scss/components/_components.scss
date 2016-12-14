@@ -46,6 +46,19 @@
   }
 }
 
+.contacts-form {
+  padding-top: 90px;
+  padding-bottom: 170px;
+  background-color: set-color('accent');
+}
+.contacts-form__item {
+  margin-right: 90px;
+  float: left;
+  .contacts__item {
+    margin-left: 0;
+  }
+}
+
 .go-top {
   display: block;
   width: 75px;

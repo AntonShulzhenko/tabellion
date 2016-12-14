@@ -12,7 +12,7 @@
     height: 100%;
     background-color: set-color('light-grey');
     position: absolute;
-    left: 370px;
+    left: 366px;
     top: 275px;
   }
   &__sidebar {
@@ -37,6 +37,7 @@
     font-size: 18px;
     line-height: 24px;
     text-transform: none;
+    letter-spacing: 1px;
   }
   &__p {
     margin-left: 30px;
