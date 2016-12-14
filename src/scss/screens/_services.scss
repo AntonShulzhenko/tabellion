@@ -2,10 +2,11 @@
   padding-top: 145px;
   padding-bottom: 90px;
   display: flex;
-  justify-content: flex-start;;
+  justify-content: flex-start;
   &__sidebar {
     width: 220px;
     margin-right: 65px;
+    background-color: set-color('white');
   }
   &__content {
     width: 100%;
@@ -39,6 +40,7 @@
         display: block;
         border: none;
         margin: 0;
+        background-color: set-color('white');
         font-family: $main-font;
         font-size: 18px;
         font-weight: 700;
@@ -51,14 +53,31 @@
           text-decoration: none;
           color: set-color('black');
           > span {
-            border-bottom: 4px solid set-color('accent');
+            &::before {
+              height: 4px;
+              background-color: set-color('accent');
+            }
           }
         }
         > span {
           position: relative;
           display: block;
-          border-bottom: 2px solid rgba(set-color('black'), 0.28);
           transition: all 0.25s ease;
+          &::before {
+            height: 4px;
+            background-color: set-color('accent');
+          }
+          &::before {
+            content: "";
+            display: block;
+            width: 100%;
+            height: 2px;
+            background-color: rgba(set-color('black'), 0.28);
+            position: absolute;
+            left: 0;
+            bottom: -4px;
+            transition: all 0.25s ease;
+          }
           > span {
             display: block;
             position: absolute;
@@ -72,6 +91,16 @@
             font-size: 24px;
             line-height: 30px;
             transition: all 0.25s ease;
+            &::before {
+              content: "\f3d6";
+              font-family: "Ionicons";
+              font-size: 24px;
+              font-weight: 300;
+              line-height: 30px;
+              position: absolute;
+              left: -7px;
+              top: 0;
+            }
           }
         }
       }
@@ -82,7 +111,10 @@
           text-decoration: none;
           color: set-color('black');
           > span {
-            border-bottom: 4px solid set-color('accent');
+            &::before {
+              height: 4px;
+              background-color: set-color('accent');
+            }
             > span {
               background-color: set-color('accent');
               bottom: 0;
@@ -96,7 +128,10 @@
             text-decoration: none;
             color: set-color('black');
             > span {
-              border-bottom: 4px solid set-color('accent');
+              &::before {
+                height: 4px;
+                background-color: set-color('accent');
+              }
               > span {
                 background-color: set-color('accent');
                 bottom: 0;
@@ -108,7 +143,26 @@
       }
     }
   }
+  &__tab-content {
+    background-color: set-color('light-grey');
+    padding: 0 25px;
+  }
+  &__more {
+    padding: 70px  90px;
+    text-align: center;
+    background-color: set-color('light-grey');
+    a {
+      display: inline-block;
+      font-family: $main-font;
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 30px;
+      color: set-color('black');
+      border-bottom: 1px dashed set-color('black');
+    }
+  }
   .scroll-container {
     max-height: 740px;
+    background-color: set-color('light-grey');
   }
 }
