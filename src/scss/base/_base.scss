@@ -41,6 +41,13 @@ p {
   font-size: $font-size;
   color: set-color('black');
 }
+.content-container {
+  position: relative;
+  padding-left: 80px;
+}
+.margin-left-55 {
+  margin-left: 55px;
+}
 .margin-left-45 {
   margin-left: 45px;
 }

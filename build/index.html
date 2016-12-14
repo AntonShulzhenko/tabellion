@@ -7,7 +7,7 @@
     <title>Tabellion</title>
     <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
 
-    
+    <link rel="stylesheet" href="css/vendor.min.css">
 
     <link rel="stylesheet" href="css/main.min.css">
 
@@ -35,7 +35,7 @@
 
     <article class="main">
       <section class="first">
-        <div class="container-fluid">
+        <div class="container-fluid margin-left-55">
           <h1 class="first__h1">Нотаріальні<br> послуги в центрі Києва</h1>
 
           <div class="row">
@@ -64,18 +64,81 @@
         </div>
       </section>
 
-      <section class="services">
-        <div class="container-fluid">
-          <div class="row">
-            <div class="col-sm-2">
-              <img src="/img/list.svg" alt="" class="services__logo margin-left-30">
-              <h4 class="services__h4 margin-bottom-30">Весь спектр нотаріальних послуг</h4>
-              <p class="margin-left-30 margin-bottom-30">Для наших клієнтів ми гарантуємо професіоналізм, конфіденційність, оперативність, доброзичливість, увагу і розуміння.</p>
-              <p class="margin-left-30 bold main-font">Ми дорожимо клієнтами і цінуємо кожного!</p>
-            </div>
+      <section class="services content-container">
+        <div class="services__sidebar">
+          <img src="/img/list.svg" alt="" class="services__logo margin-left-30">
+          <h4 class="services__h4">Весь спектр нотаріальних<br> послуг</h4>
+          <p class="services__p">Для наших клієнтів ми гарантуємо професіоналізм, конфіденційність, оперативність, доброзичливість, увагу і розуміння.</p>
+          <p class="services__p bold main-font">Ми дорожимо клієнтами і цінуємо кожного!</p>
+        </div>
 
-            <div class="col-sm-8">
+        <div class="services__content">
+          <div class="services__tabs tabs">
+            <!-- Nav tabs -->
+            <ul class="services__nav-tabs nav-tabs clearfix" role="tablist">
+              <li role="presentation" class="active">
+                <a href="#service-cat-1" aria-controls="service-cat-1" role="tab" data-toggle="tab"><span>Послуги Населенню</span></a>
+              </li>
+              <li role="presentation">
+                <a href="#service-cat-2" aria-controls="service-cat-2" role="tab" data-toggle="tab"><span>юридичним особам</span></a>
+              </li>
+              <li role="presentation">
+                <a href="#service-cat-3" aria-controls="service-cat-3" role="tab" data-toggle="tab"><span>операції з нерухомістю</span></a>
+              </li>
+            </ul>
 
+            <!-- Tab panes -->
+            <div class="scroll-container">
+              <div class="services__tab-content tab-content">
+                <div role="tabpanel" class="services__tab-pane tab-pane active" id="service-cat-1">
+                  <div class="container-fluid">
+                    <div class="row">
+                      <div class="col-sm-4">
+                        <div class="services__tab-pane-item">test 1</div>
+                        <div class="services__tab-pane-item">test 2</div>
+                        <div class="services__tab-pane-item">test 3</div>
+                      </div>
+                      <div class="col-sm-4">
+                        <div class="services__tab-pane-item">test 4</div>
+                        <div class="services__tab-pane-item">test 5</div>
+                        <div class="services__tab-pane-item">test 6</div>
+                      </div>
+                      <div class="col-sm-4">
+                        <div class="services__tab-pane-item">test 7</div>
+                        <div class="services__tab-pane-item">test 8</div>
+                        <div class="services__tab-pane-item">test 9</div>
+                      </div>
+                      <div class="col-sm-4">
+                        <div class="services__tab-pane-item">test 1</div>
+                        <div class="services__tab-pane-item">test 2</div>
+                        <div class="services__tab-pane-item">test 3</div>
+                      </div>
+                      <div class="col-sm-4">
+                        <div class="services__tab-pane-item">test 4</div>
+                        <div class="services__tab-pane-item">test 5</div>
+                        <div class="services__tab-pane-item">test 6</div>
+                      </div>
+                      <div class="col-sm-4">
+                        <div class="services__tab-pane-item">test 7</div>
+                        <div class="services__tab-pane-item">test 8</div>
+                        <div class="services__tab-pane-item">test 9</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div role="tabpanel" class="services__tab-pane tab-pane" id="service-cat-2">
+                  <div class="services__tab-pane-item">test 4</div>
+                  <div class="services__tab-pane-item">test 5</div>
+                  <div class="services__tab-pane-item">test 6</div>
+                </div>
+
+                <div role="tabpanel" class="services__tab-pane tab-pane" id="service-cat-3">
+                  <div class="services__tab-pane-item">test 7</div>
+                  <div class="services__tab-pane-item">test 8</div>
+                  <div class="services__tab-pane-item">test 9</div>
+                </div>
+              </div>
             </div>
           </div>
         </div>

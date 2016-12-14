@@ -1,5 +1,16 @@
 .services {
-  padding: 145px 0 90px;
+  padding-top: 145px;
+  padding-bottom: 90px;
+  display: flex;
+  justify-content: flex-start;;
+  &__sidebar {
+    width: 220px;
+    margin-right: 65px;
+  }
+  &__content {
+    width: 100%;
+    max-width: 940px;
+  }
   &__logo {
     max-width: 60px;
     margin-bottom: 75px;
@@ -7,5 +18,97 @@
   &__h4 {
     font-size: 18px;
     line-height: 24px;
+    text-transform: none;
+  }
+  &__p {
+    margin-left: 30px;
+    margin-top: 30px;
+    font-size: 14px;
+    line-height: 25px;
+  }
+  &__nav-tabs {
+    border: none;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    > li {
+      margin: 0;
+      width: calc(100% / 3);
+      > a {
+        padding: 40px;
+        display: block;
+        border: none;
+        margin: 0;
+        font-family: $main-font;
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 25px;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        color: set-color('black');
+        transition: all 0.25s ease;
+        &:hover {
+          text-decoration: none;
+          color: set-color('black');
+          > span {
+            border-bottom: 4px solid set-color('accent');
+          }
+        }
+        > span {
+          position: relative;
+          display: block;
+          border-bottom: 2px solid rgba(set-color('black'), 0.28);
+          transition: all 0.25s ease;
+          > span {
+            display: block;
+            position: absolute;
+            right: 0;
+            bottom: 8px;
+            width: 60px;
+            height: 30px;
+            box-shadow: inset 0 0 0 1px set-color('accent');
+            text-align: right;
+            padding-right: 5px;
+            font-size: 24px;
+            line-height: 30px;
+            transition: all 0.25s ease;
+          }
+        }
+      }
+      &.active {
+        > a {
+          border: none;
+          background-color: set-color('light-grey');
+          text-decoration: none;
+          color: set-color('black');
+          > span {
+            border-bottom: 4px solid set-color('accent');
+            > span {
+              background-color: set-color('accent');
+              bottom: 0;
+              height: 38px;
+            }
+          }
+          &:hover,
+          &:focus {
+            border: none;
+            background-color: set-color('light-grey');
+            text-decoration: none;
+            color: set-color('black');
+            > span {
+              border-bottom: 4px solid set-color('accent');
+              > span {
+                background-color: set-color('accent');
+                bottom: 0;
+                height: 38px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .scroll-container {
+    max-height: 740px;
   }
 }

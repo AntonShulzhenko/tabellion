@@ -1,6 +1,6 @@
 (function($) {
   if($(window).width() > 768) {
-    $('.aside__body').jScrollPane({
+    $('.scroll-container').jScrollPane({
 			autoReinitialise: true
 		});
   }
