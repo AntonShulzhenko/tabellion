@@ -1,0 +1,10 @@
+.faq {
+  padding: 140px 0 230px 340px;
+  background-color: set-color('white');
+  &__h2 {
+    margin-bottom: 90px;
+  }
+  .send-form {
+    max-width: 480px;
+  }
+}
