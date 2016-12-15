@@ -253,6 +253,7 @@
   .scroll-container {
     height: 740px;
     margin-top: 60px;
+    overflow-x: hidden;
     .jspVerticalBar {
       width: 10px;
       background-color: transparent;

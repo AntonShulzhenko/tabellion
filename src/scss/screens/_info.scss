@@ -1,13 +1,38 @@
 .info {
   background-color: set-color('light-grey');
   position: relative;
-  // padding-top: 185px;
-  // padding-bottom: 280px;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  &__wrap {
+    padding: 90px 0 170px;
+    position: relative;
+    background-color: set-color('accent');
+    &::before,
+    &::after {
+      content: "";
+      display: block;
+      height: 100px;
+      background-color: set-color('accent');
+      position: absolute;
+    }
+    &::before {
+      width: 890px;
+      top: -100px;
+      left: 0;
+    }
+    &::after {
+      width: 800px;
+      bottom: -100px;
+      left: 890px;
+    }
+  }
   &__h2 {
-    margin-bottom: 65px;
     padding-left: 0;
     &::before {
       display: none;
     }
+  }
+  .contacts-form {
+    padding-left: 85px;
   }
 }
