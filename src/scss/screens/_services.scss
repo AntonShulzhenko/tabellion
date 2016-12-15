@@ -1,6 +1,5 @@
 .services {
-  padding-top: 145px;
-  padding-bottom: 90px;
+  padding: 145px 0 0 340px;
   display: flex;
   justify-content: flex-start;
   position: relative;
@@ -8,12 +7,22 @@
   &::before {
     content: "";
     display: block;
-    width: 100%;
-    height: 100%;
+    width: 260px;
+    height: 94px;
     background-color: set-color('light-grey');
     position: absolute;
-    left: 366px;
-    top: 275px;
+    left: 0;
+    bottom: 0;
+  }
+  &::after {
+    content: "";
+    display: block;
+    width: 350px;
+    height: 130px;
+    background-color: set-color('white');
+    position: absolute;
+    left: 1565px;
+    top: 145px;
   }
   &__sidebar {
     width: 220px;
@@ -22,12 +31,13 @@
     background-color: set-color('white');
   }
   &__content {
-    width: 100%;
-    max-width: 940px;
+    width: calc(100% - 285px);
+    background-color: set-color('light-grey');
+    padding-bottom: 90px;
     position: relative;
   }
   &__tabs {
-    background-color: set-color('light-grey');
+    max-width: 940px;
   }
   &__logo {
     max-width: 60px;

@@ -1,0 +1,71 @@
+.about {
+  background-color: set-color('light-grey');
+  padding: 120px 0 270px 340px;
+  position: relative;
+  &::before {
+    content: "";
+    display: block;
+    width: 845px;
+    height: 83px;
+    background-color: set-color('white');
+    position: absolute;
+    left: 23px;
+    bottom: 0;
+  }
+  &::after {
+    content: "T";
+    font-family: $main-font;
+    font-weight: 700;
+    font-size: 1100px;
+    line-height: 740px;
+    color: set-color('white');
+    position: absolute;
+    bottom: 0;
+    right: 24%;
+  }
+  > div {
+    position: relative;
+    z-index: 2;
+  }
+  &__heading {
+    position: relative;
+    margin-bottom: 80px;
+    display: inline-block;
+    &::after {
+      content: "";
+      display: block;
+      width: 240px;
+      height: 1px;
+      background-color: set-color('black');
+      position: absolute;
+      right: -310px;
+      bottom: 10px;
+    }
+    span {
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 1;
+      font-style: italic;
+      padding-left: 30px;
+    }
+  }
+  &__h2 {
+    padding-bottom: 15px;
+  }
+  &__p {
+    max-width: 640px;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 36px;
+    margin-top: 60px;
+    margin-bottom: 0;
+    &_lead {
+      max-width: 420px;
+      margin-top: 0;
+      font-weight: 700;
+      font-size: 22px;
+      line-height: 48px;
+      padding-left: 30px;
+    }
+  }
+}

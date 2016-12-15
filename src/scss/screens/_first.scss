@@ -4,10 +4,11 @@
   overflow: hidden;
   position: relative;
   padding-bottom: 145px;
+  padding-left: 315px;
   &::after {
     content: "";
     display: block;
-    width: 69%;
+    width: 60%;
     height: 100%;
     max-height: 830px;
     background: {

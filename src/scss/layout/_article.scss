@@ -1,8 +1,9 @@
 .main {
   width: 100%;
-  padding: 100px 0 0 260px;
+  padding: 100px 0 0 0;
   position: relative;
   background-color: set-color('white');
+  overflow: hidden;
   &::before {
     content: "T";
     font-family: $main-font;
