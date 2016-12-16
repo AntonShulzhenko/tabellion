@@ -1,4 +1,6 @@
 .contacts {
+  margin: 0;
+  padding: 0;
   list-style: none;
   overflow: hidden;
   display: flex;
@@ -14,6 +16,9 @@
     line-height: 26px;
     color: set-color('grey');
     position: relative;
+    @include for-desktop-only {
+      margin-left: 50px;
+    }
     &::before {
       content: "";
       display: block;

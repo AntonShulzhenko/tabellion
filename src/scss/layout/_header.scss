@@ -44,6 +44,10 @@
       right: -368px;
       top: 50%;
       margin-top: -1px;
+      @include for-desktop-only {
+        width: 220px;
+        right: -260px;
+      }
     }
   }
 }
