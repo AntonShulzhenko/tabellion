@@ -19,6 +19,15 @@
     @include for-desktop-only {
       margin-left: 50px;
     }
+    @include for-tablet-landscape-only {
+      min-width: 240px;
+      margin-left: 30px;
+    }
+    @include for-tablet-portait-only {
+      min-width: auto;
+      margin-left: 30px;
+      padding-left: 20px;
+    }
     &::before {
       content: "";
       display: block;
@@ -35,6 +44,9 @@
     }
     &_phone {
       font-size: 24px;
+      @include for-tablet-portait-only {
+        font-size: 14px;
+      }
       &::before {
         background: {
           image: url(../img/phone-svg.svg);

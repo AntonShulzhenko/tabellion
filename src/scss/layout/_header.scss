@@ -12,6 +12,14 @@
   justify-content: space-between;
   align-items: center;
   padding: 0 40px 0 50px;
+  @include for-tablet-landscape-only {
+    height: 80px;
+    padding: 0 20px;
+  }
+  @include for-tablet-portait-only {
+    height: 60px;
+    padding: 0 20px;
+  }
   &__logo {
     display: block;
     width: 170px;
@@ -20,6 +28,7 @@
     font-size: 26px;
     font-weight: 700;
     line-height: 65px;
+    text-align: center;
     background-color: set-color('grey');
     color: set-color('white');
     padding: 0 20px;
@@ -27,6 +36,19 @@
     position: relative;
     cursor: pointer;
     transition: all 0.25s ease;
+    @include for-tablet-landscape-only {
+      width: 150px;
+      height: 50px;
+      font-size: 20px;
+      line-height: 50px;
+      padding: 0 10px;
+    }
+    @include for-tablet-portait-only {
+      width: 140px;
+      height: 45px;
+      line-height: 45px;
+      font-size: 20px;
+    }
     &:hover {
       color: set-color('grey');
       background-color: set-color('white');
@@ -47,6 +69,13 @@
       @include for-desktop-only {
         width: 220px;
         right: -260px;
+      }
+      @include for-tablet-landscape-only {
+        width: 100px;
+        right: -130px;
+      }
+      @include for-tablet-portait-only {
+        display: none;
       }
     }
   }
