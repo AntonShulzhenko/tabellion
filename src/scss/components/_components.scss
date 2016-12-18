@@ -16,6 +16,9 @@
     line-height: 26px;
     color: set-color('grey');
     position: relative;
+    &:first-child {
+      margin-left: 0;
+    }
     @include for-desktop-only {
       margin-left: 50px;
     }
@@ -25,7 +28,13 @@
     }
     @include for-tablet-portait-only {
       min-width: auto;
-      margin-left: 30px;
+      margin-left: 20px;
+      padding-left: 20px;
+    }
+    @include for-phone-only {
+      font-size: 0;
+      min-width: auto;
+      margin-left: 20px;
       padding-left: 20px;
     }
     &::before {
@@ -41,11 +50,18 @@
       position: absolute;
       left: 0;
       bottom: 8px;
+      @include for-phone-only {
+        width: 20px;
+        height: 20px;
+      }
     }
     &_phone {
       font-size: 24px;
       @include for-tablet-portait-only {
         font-size: 14px;
+      }
+      @include for-phone-only {
+        font-size: 0;
       }
       &::before {
         background: {

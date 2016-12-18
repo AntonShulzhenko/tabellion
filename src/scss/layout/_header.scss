@@ -20,6 +20,11 @@
     height: 60px;
     padding: 0 20px;
   }
+  @include for-phone-only {
+    height: 60px;
+    padding: 0 20px;
+    justify-content: flex-end;
+  }
   &__logo {
     display: block;
     width: 170px;
@@ -49,6 +54,15 @@
       line-height: 45px;
       font-size: 20px;
     }
+    @include for-phone-only {
+      width: 100px;
+      height: 40px;
+      line-height: 40px;
+      font-size: 16px;
+      padding: 0 10px;
+      position: absolute;
+      left: 20px;
+    }
     &:hover {
       color: set-color('grey');
       background-color: set-color('white');
@@ -77,6 +91,23 @@
       @include for-tablet-portait-only {
         display: none;
       }
+      @include for-phone-only {
+        display: none;
+      }
+    }
+  }
+  &__menu-btn {
+    display: none;
+    font-size: 20px;
+    line-height: 1;
+    color: set-color('grey');
+    @include for-tablet-portait-only {
+      display: block;
+      margin-left: 10px;
+    }
+    @include for-phone-only {
+      display: block;
+      margin-left: 20px;
     }
   }
 }
