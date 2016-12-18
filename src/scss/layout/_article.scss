@@ -7,6 +7,9 @@
   @include for-tablet-landscape-only {
     padding-top: 80px;
   }
+  @include for-tablet-portait-only {
+    padding-top: 60px;
+  }
   @include for-phone-only {
     padding-top: 60px;
   }

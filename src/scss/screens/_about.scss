@@ -2,6 +2,18 @@
   background-color: set-color('light-grey');
   padding: 120px 0 270px 340px;
   position: relative;
+  @include for-desktop-only {
+    padding: 100px 0 100px 340px;
+  }
+  @include for-tablet-landscape-only {
+    padding: 100px 0 100px 245px;
+  }
+  @include for-tablet-portait-only {
+    padding: 60px 5px;
+  }
+  @include for-phone-only {
+    padding: 60px 5px;
+  }
   &::before {
     content: "";
     display: block;
@@ -11,6 +23,21 @@
     position: absolute;
     left: 23px;
     bottom: 0;
+    @include for-desktop-only {
+      width: 50%;
+    }
+    @include for-tablet-landscape-only {
+      width: 40%;
+      height: 50px;
+    }
+    @include for-tablet-portait-only {
+      width: 40%;
+      height: 40px;
+      left: 0;
+    }
+    @include for-phone-only {
+      display: none;
+    }
   }
   &::after {
     content: "T";
@@ -22,6 +49,24 @@
     position: absolute;
     bottom: 0;
     right: 24%;
+    @include for-desktop-only {
+      right: 20%;
+      font-size: 900px;
+      line-height: 600px;
+    }
+    @include for-tablet-landscape-only {
+      font-size: 850px;
+      line-height: 580px;
+      right: 10%;
+    }
+    @include for-tablet-portait-only {
+      font-size: 650px;
+      line-height: 440px;
+      right: 10%;
+    }
+    @include for-phone-only {
+      display: none;
+    }
   }
   > div {
     position: relative;
@@ -31,6 +76,15 @@
     position: relative;
     margin-bottom: 80px;
     display: inline-block;
+    @include for-tablet-landscape-only {
+      margin-bottom: 60px;
+    }
+    @include for-tablet-portait-only {
+      margin-bottom: 60px;
+    }
+    @include for-phone-only {
+      margin-bottom: 40px;
+    }
     &::after {
       content: "";
       display: block;
@@ -40,6 +94,9 @@
       position: absolute;
       right: -310px;
       bottom: 10px;
+      @include for-phone-only {
+        display: none;
+      }
     }
     span {
       font-size: 16px;
@@ -47,6 +104,10 @@
       line-height: 1;
       font-style: italic;
       padding-left: 30px;
+      @include for-phone-only {
+        display: block;
+        line-height: 25px;
+      }
     }
   }
   &__h2 {
@@ -59,6 +120,22 @@
     line-height: 36px;
     margin-top: 60px;
     margin-bottom: 0;
+    @include for-tablet-landscape-only {
+      max-width: 750px;
+      line-height: 36px;
+    }
+    @include for-tablet-landscape-only {
+      margin-top: 40px;
+    }
+    @include for-tablet-portait-only {
+      margin-top: 30px;
+      max-width: 100%;
+    }
+    @include for-phone-only {
+      font-size: 16px;
+      line-height: 25px;
+      margin-top: 30px;
+    }
     &_lead {
       max-width: 420px;
       margin-top: 0;
@@ -66,6 +143,29 @@
       font-size: 22px;
       line-height: 48px;
       padding-left: 30px;
+      @include for-desktop-only {
+        font-size: 20px;
+        line-height: 42px;
+        padding-left: 0;
+      }
+      @include for-tablet-landscape-only {
+        max-width: 750px;
+        font-size: 20px;
+        line-height: 36px;
+        padding-left: 0;
+      }
+      @include for-tablet-portait-only {
+        max-width: 100%;
+        font-size: 20px;
+        line-height: 36px;
+        padding-left: 0;
+      }
+      @include for-phone-only {
+        font-size: 16px;
+        line-height: 30px;
+        padding-left: 0;
+        max-width: 100%;
+      }
     }
   }
 }

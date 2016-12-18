@@ -37,6 +37,13 @@ h1, h2, h3, h4, h5, h6 {
     top: 0;
   }
 }
+h2 {
+  @include for-phone-only {
+    font-size: 28px;
+    line-height: 34px;
+    letter-spacing: 3px;
+  }
+}
 p {
   font-family: $content-font;
   font-size: $font-size;
