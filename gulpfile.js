@@ -74,7 +74,7 @@ gulp.task('serve', ['styles'], () => {
 });
 
 
-gulp.task('build', () => {
+gulp.task('build', ['images', 'fonts', 'libs'], () => {
   return gulp.src('src/*.html')
     .pipe(useref())
     .pipe(gulpif('*.js', uglify()))
