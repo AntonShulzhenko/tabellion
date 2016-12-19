@@ -276,6 +276,10 @@
       }
     }
   }
+  &__error {
+    color: red;
+    display: none;
+  }
 }
 
 .accordion {
