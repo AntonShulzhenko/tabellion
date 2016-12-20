@@ -7,33 +7,31 @@
   user-select: none;
 }
 
-.pace.pace-inactive .pace-progress {
+.pace-inactive {
   display: none;
 }
 
 .pace .pace-progress {
+  background: #fdd226;
   position: fixed;
   z-index: 2000;
-  top: 0;
-  right: 0;
-  height: 5rem;
-  width: 5rem;
-
-  -webkit-transform: translate3d(0, 0, 0) !important;
-  -ms-transform: translate3d(0, 0, 0) !important;
-  transform: translate3d(0, 0, 0) !important;
+  top: 50%;
+  right: 100%;
+  width: 100%;
+  height: 2px;
+  margin-top: -1px;
 }
 
-.pace .pace-progress:after {
-  display: block;
-  position: absolute;
-  top: 0;
-  right: .5rem;
+.pace .pace-progress::before {
   content: attr(data-progress-text);
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
   font-family: "Gilroy", sans-serif;
-  font-weight: 100;
-  font-size: 5rem;
-  line-height: 1;
-  text-align: right;
+  font-size: 30px;
+  font-weight: 500;
   color: #303030;
+  text-align: center;
 }
