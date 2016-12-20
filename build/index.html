@@ -12,9 +12,27 @@
     <link rel="stylesheet" href="css/main.min.css">
 
     <script src="js/modernizr.min.js"></script>
+
+    <script src="js/pace.min.js"></script>
+
   </head>
   <body>
+    <div id="loader"></div>
+
+    <script type="text/javascript">
+      var loader = (function() {
+        var ldr = document.getElementById('loader');
+
+        Pace.on('hide', function() {
+          setTimeout(function() {
+            ldr.classList.add('fadeOut');
+          }, 500);
+        });
+      })();
+    </script>
+
     <div id="docTop"></div>
+
     <header class="header">
       <a href="#" class="header__logo">Табелліон</a>
 
@@ -306,15 +324,15 @@
                 <h3 class="send-form__h3">Не знайшли потрібної відповіді? Надішліть нам своє питання за допомогою форми.</h3>
                 <label class="send-form__label send-form__label_textarea">
                   <textarea name="textarea" class="send-form__textarea" placeholder="Текст вашого запитання"></textarea>
-                  <p class="send-form__error">Error</p>
+                  <p class="send-form__error">* Поле обов'язкове до заповнення</p>
                 </label>
                 <label class="send-form__label send-form__label_name">
                   <input type="text" class="send-form__name" name="name" placeholder="Ваше імя (як до Вас звертатися?)">
-                  <p class="send-form__error">Error</p>
+                  <p class="send-form__error">* Поле обов'язкове до заповнення</p>
                 </label>
                 <label class="send-form__label send-form__label_email">
                   <input type="email" class="send-form__email" name="email" placeholder="Електронна адреса для віподвіді">
-                  <p class="send-form__error">Error</p>
+                  <p class="send-form__error">* Поле обов'язкове до заповнення</p>
                 </label>
                 <button type="submit" class="button send-form__btn">Відправити</button>
               </form>
