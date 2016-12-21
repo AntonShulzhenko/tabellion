@@ -264,6 +264,11 @@
     }
   }
   &__btn {
+    &:focus {
+      background-color: set-color('black');
+      text-decoration: none;
+      color: set-color('white');
+    }
     @include for-desktop-only {
       padding: 20px;
       width: 100%;

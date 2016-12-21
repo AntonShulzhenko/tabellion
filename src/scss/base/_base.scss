@@ -14,6 +14,7 @@ body {
   font-size: $font-size;
   color: set-color('black');
   background-color: set-color('white');
+  padding-right: 0 !important;
 }
 
 h1, h2, h3, h4, h5, h6 {
