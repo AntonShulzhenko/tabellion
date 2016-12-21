@@ -62,6 +62,14 @@
         &:not(:hover) {
           opacity: 0.3;
         }
+        &:hover {
+          &::before {
+            width: 100%;
+          }
+          &::after {
+            transform: translateX(5px);
+          }
+        }
       }
     }
     @include for-tablet-portait-only {
@@ -102,9 +110,21 @@
       position: absolute;
       left: 0;
       top: 0;
-      width: 14px;
-      height: 10px;
-      box-shadow: 0 0 0 3px set-color('black');
+      width: 18px;
+      height: 14px;
+      border: 3px solid set-color('black');
+      transition: all 0.25s ease;
+    }
+    &::before {
+      content: "";
+      display: block;
+      width: 0;
+      height: 1px;
+      background-color: set-color('black');
+      position: absolute;
+      left: 0;
+      bottom: -1px;
+      transition: all 0.5s ease;
     }
     &_ask {
       width: 100%;
