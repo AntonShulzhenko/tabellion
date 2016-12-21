@@ -8,6 +8,7 @@
 }
 
 .pace-inactive {
+  transition-delay: 1s;
   display: none;
 }
 
@@ -16,22 +17,28 @@
   position: fixed;
   z-index: 2000;
   top: 50%;
+  margin-top: -1px;
   right: 100%;
   width: 100%;
   height: 2px;
-  margin-top: -1px;
 }
 
-.pace .pace-progress::before {
-  content: attr(data-progress-text);
+.pace .pace-progress:after {
+  display: block;
   position: absolute;
-  left: 0;
   top: 0;
-  width: 100%;
-  height: 100%;
+  right: .5rem;
+  content: attr(data-progress-text);
   font-family: "Gilroy", sans-serif;
-  font-size: 30px;
-  font-weight: 500;
-  color: #303030;
-  text-align: center;
+  font-weight: 100;
+  font-size: 5rem;
+  line-height: 1;
+  text-align: right;
+  color: rgba(0, 0, 0, 0.19999999999999996);
+}
+
+@media (max-width: 600px) {
+  .pace .pace-progress:after {
+    font-size: 2rem;
+  }
 }
