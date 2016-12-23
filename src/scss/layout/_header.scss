@@ -73,31 +73,42 @@
       text-decoration: none;
       border-color: rgba(0,0,0,0);
     }
-    &::after {
-      content: "";
-      display: block;
-      width: 324px;
-      height: 2px;
-      background-color: set-color('grey');
-      position: absolute;
-      right: -368px;
-      top: 50%;
-      margin-top: -1px;
-      @include for-desktop-only {
-        width: 220px;
-        right: -260px;
-      }
-      @include for-tablet-landscape-only {
-        width: 100px;
-        right: -130px;
-      }
-      @include for-tablet-portait-only {
-        display: none;
-      }
-      @include for-phone-only {
-        display: none;
-      }
+  }
+  &__logo-line {
+    content: "";
+    display: block;
+    width: 324px;
+    height: 2px;
+    background-color: set-color('grey');
+    position: absolute;
+    left: 214px;
+    top: 50%;
+    margin-top: -1px;
+    z-index: 3;
+    @include for-desktop-only {
+      width: 220px;
+      left: 200px;
     }
+    @include for-tablet-landscape-only {
+      width: 100px;
+      left: 170px;
+    }
+    @include for-tablet-portait-only {
+      display: none;
+    }
+    @include for-phone-only {
+      display: none;
+    }
+  }
+  &__logo-overlay {
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color: set-color('white');
+    width: 100%;
+    height: calc(100% + 3px);
+    display: block;
+    z-index: 2;
   }
   &__menu-btn {
     display: none;

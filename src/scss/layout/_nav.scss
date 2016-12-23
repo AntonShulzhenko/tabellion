@@ -54,6 +54,7 @@
     margin: 0 0 24px;
     list-style: none;
     opacity: 1;
+    position: relative;
     transition: all 0.25s ease;
     &:hover {
       .nav__link {
