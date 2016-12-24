@@ -1,6 +1,5 @@
 (function($) {
   var header = $('.header');
-  var goTop = $('.go-top');
   var bodyHeight = $('body').height();
   var contactsSection = $('.contacts-section');
   var footer = $('.footer');
@@ -13,12 +12,10 @@
   });
 
   $(window).on('scroll', function() {
-    if(header.offset().top > 1) {
+    if(header.offset().top > 100) {
       header.addClass('is-scroll');
-      goTop.addClass('is-visible');
     } else {
       header.removeClass('is-scroll');
-      goTop.removeClass('is-visible');
     }
 
     if($(window).width() > 899) {

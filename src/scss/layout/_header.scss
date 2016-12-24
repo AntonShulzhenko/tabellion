@@ -12,6 +12,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 0 40px 0 50px;
+  transition: all 0.25s ease;
   &.is-scroll {
     box-shadow: 0 1px 2px rgba(0,0,0,0.1);
   }
@@ -109,6 +110,9 @@
     height: calc(100% + 3px);
     display: block;
     z-index: 2;
+    @include for-tablet-portait-only {
+      display: none;
+    }
   }
   &__menu-btn {
     display: none;
@@ -122,6 +126,20 @@
     @include for-phone-only {
       display: block;
       margin-left: 20px;
+    }
+  }
+  .contacts__item {
+    &::after {
+      display: none;
+    }
+    span.line {
+      display: block;
+      width: 100%;
+      height: 1px;
+      background-color: rgba(set-color('grey'), 0.37);
+      position: absolute;
+      left: 0;
+      bottom: 0;
     }
   }
 }

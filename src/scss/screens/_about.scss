@@ -76,6 +76,11 @@
     position: relative;
     margin-bottom: 80px;
     display: inline-block;
+    &.faded {
+      &.out {
+        transform: translateX(-50px);
+      }
+    }
     @include for-tablet-landscape-only {
       margin-bottom: 60px;
     }
