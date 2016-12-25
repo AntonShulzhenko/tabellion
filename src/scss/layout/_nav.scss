@@ -11,11 +11,6 @@
   justify-content: center;
   align-items: flex-end;
   transition: all 0.5s ease;
-  &.is-visible {
-    display: flex;
-    opacity: 1;
-    transition-delay: 0.5s;
-  }
   &.small {
     transform: translate3d(-220px, 0, 0);
     padding-right: 40px;
@@ -40,19 +35,33 @@
     }
   }
   @include for-tablet-portait-only {
-    display: none;
     width: 100%;
     height: 100%;
-    background-color: rgba(255,255,255,0.9);
-    padding: 60px 20px 0;
-    opacity: 0;
+    background-color: #ffffff;
+    padding: 0 20px 0;
+    top: 0;
+    right: 0;
+    left: auto;
+    overflow: hidden;
+    transition-property: none;
+    transform: scale(0);
+    transform-origin: 90% 30px;
   }
   @include for-phone-only {
-    display: none;
     width: 100%;
     height: 100%;
-    background-color: rgba(255,255,255,0.9);
-    padding: 60px 20px 0;
+    background-color: #ffffff;
+    padding: 0 20px 0;
+    top: 0;
+    right: 0;
+    left: auto;
+    overflow: hidden;
+    transition-property: none;
+    transform: scale(0);
+    transform-origin: 90% 30px;
+  }
+  &.is-active {
+    transform: scale(1);
   }
   &__list {
     width: 100%;

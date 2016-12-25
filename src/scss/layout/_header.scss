@@ -113,6 +113,9 @@
     @include for-tablet-portait-only {
       display: none;
     }
+    @include for-phone-only {
+      display: none;
+    }
   }
   &__menu-btn {
     display: none;

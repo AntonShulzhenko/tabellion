@@ -82,4 +82,4 @@ gulp.task('build', ['images', 'fonts', 'libs'], () => {
     .pipe(gulp.dest('build'));
 });
 
-gulp.task('default', ['serve', 'libs', 'js', 'build', 'fonts', 'images']);
+gulp.task('default', ['serve', 'js']);
