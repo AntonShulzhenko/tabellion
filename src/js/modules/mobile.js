@@ -7,7 +7,7 @@
   var phoneNumber   = document.querySelector('.header .contacts__item_phone').textContent;
   var location      = document.querySelector('.header .contacts__item_location').textContent;
 
-  if(window.innerWidth < 600) {
+  if(window.innerWidth < 900) {
     mobilePones.setAttribute('href', 'tel:' + phoneNumber);
     mobilePones.innerHTML = phoneNumber;
     mobileAddress.innerHTML = location;

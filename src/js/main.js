@@ -127,7 +127,7 @@ function initMap() {
   var phoneNumber   = document.querySelector('.header .contacts__item_phone').textContent;
   var location      = document.querySelector('.header .contacts__item_location').textContent;
 
-  if(window.innerWidth < 600) {
+  if(window.innerWidth < 900) {
     mobilePones.setAttribute('href', 'tel:' + phoneNumber);
     mobilePones.innerHTML = phoneNumber;
     mobileAddress.innerHTML = location;
@@ -185,7 +185,7 @@ function initMap() {
 var header         = document.querySelector('.header');
 var logo           = document.querySelector('.header__logo');
 var logoOverlay    = document.querySelector('.header__logo-overlay');
-var logoLine       = document.querySelector('.header__logo-line');
+
 var headerContacts = header.querySelectorAll('.contacts__item');
 
 var navItems       = document.querySelectorAll('.nav__item');
@@ -195,14 +195,7 @@ var firstServices  = document.querySelector('.first__services');
 var firstLead      = document.querySelector('.first__lead');
 var firstAmount    = document.querySelector('.first__services-amount');
 
-var logoLineWidth = '324px';
 var winWidth = window.innerWidth;
-
-if(winWidth > 1199 && winWidth < 1800) {
-  logoLineWidth = '220px';
-} else if(winWidth > 899 && winWidth < 1200) {
-  logoLineWidth = '100px';
-}
 
 var tlNav      = new TimelineMax({ease: Power4.easeOut});
 var tlHeader   = new TimelineMax({ease: Power4.easeOut});
@@ -213,8 +206,7 @@ if(winWidth > 899) {
   Pace.on('hide', function() {
     tlHeader.from(logo, 1, {x: -50});
     tlHeader
-    .fromTo(logoOverlay, 0.5, {width: '100%'}, {width: '0px'})
-    .fromTo(logoLine, 0.5, {width: '0'}, {width: logoLineWidth});
+    .fromTo(logoOverlay, 0.5, {width: '100%'}, {width: '0px'});
     tlHeader.to(logo, 1.5, {x: 0});
 
     tlNav.staggerFrom(navItems, 1.5, {x: -50, opacity: 0, delay: 0.25}, 0.25);
