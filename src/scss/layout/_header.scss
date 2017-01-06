@@ -52,7 +52,7 @@
     font-size: 20px;
     font-weight: 700;
     line-height: 1.2;
-    text-align: center;
+    text-align: left;
     background-color: set-color('grey');
     color: set-color('white');
     padding: 6px 20px;
@@ -60,13 +60,13 @@
     position: relative;
     transition: all 0.25s ease;
     @include for-tablet-landscape-only {
-      width: 150px;
+      width: 105px;
       height: 50px;
       font-size: 16px;
       padding: 5px 10px;
     }
     @include for-tablet-portait-only {
-      width: 140px;
+      width: 120px;
       height: 45px;
       padding: 5px 10px;
       font-size: 14px;
@@ -87,16 +87,20 @@
   }
   &__logo-line {
     display: block;
-    margin-left: 20px;
-    font-size: 16px;
+    padding-left: 20px;
+    font-size: 28px;
+    line-height: 1.2;
     font-weight: 700;
     font-family: $main-font;
     color: set-color('grey');
+    @include for-desktop-only {
+      font-size: 24px;
+    }
     @include for-tablet-landscape-only {
-      font-size: 14px;
+      font-size: 18px;
     }
     @include for-tablet-portait-only {
-      font-size: 14px;
+      font-size: 16px;
     }
     @include for-phone-only {
       display: none;
@@ -144,6 +148,11 @@
       position: absolute;
       left: 0;
       bottom: 0;
+    }
+  }
+  .h-lg {
+    @media (min-width: 1440px) {
+      display: none;
     }
   }
 }

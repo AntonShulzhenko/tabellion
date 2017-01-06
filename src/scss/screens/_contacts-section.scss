@@ -34,10 +34,10 @@
       }
     }
     @include for-tablet-landscape-only {
-      padding: 20px;
+      padding: 20px 50px;
       &__item {
         &:nth-child(2) {
-          width: 30%;
+          width: 32%;
         }
       }
     }
