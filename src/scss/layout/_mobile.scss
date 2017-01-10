@@ -22,26 +22,23 @@
     line-height: 30px;
     color: set-color('black');
   }
-  &__phones {
+  &__content {
+    display: block;
+    text-align: center;
+    font-family: $main-font;
+    font-size: 16px;
+    font-weight: 700;
+    color: set-color('black');
     text-decoration: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    transition-delay: 300ms;
     &:hover,
     &:focus,
     &:active {
       color: set-color('black');
       text-decoration: none;
     }
-  }
-  &__address,
-  &__phones {
-    display: none;
-    text-align: center;
-    font-family: $main-font;
-    font-size: 16px;
-    font-weight: 700;
-    color: set-color('black');
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    transition-delay: 300ms;
   }
 }
 .is-active {

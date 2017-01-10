@@ -97,7 +97,7 @@
       font-size: 24px;
     }
     @include for-tablet-landscape-only {
-      font-size: 18px;
+      font-size: 16px;
     }
     @include for-tablet-portait-only {
       font-size: 16px;
@@ -137,6 +137,9 @@
     }
   }
   .contacts__item {
+    @include for-tablet-landscape-only {
+      font-size: 13px;
+    }
     &::after {
       display: none;
     }

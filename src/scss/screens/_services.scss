@@ -362,12 +362,14 @@
     }
   }
   &__tab-pane-item {
-    width: calc(100% / 3);
-    max-width: 220px;
-    min-height: 85px;
-    margin-bottom: 60px;
-    border-bottom: 1px solid rgba(set-color('black'), 0.37);
+    width: 100%;
+    margin-bottom: 30px;
     position: relative;
+    @extend h4;
+    letter-spacing: 1px;
+    text-transform: none;
+    line-height: 25px;
+    font-weight: 300;
     @media (min-width: 1320px) and (max-width: 1500px) {
       max-width: 200px;
       min-height: 90px;
@@ -386,40 +388,29 @@
       margin-bottom: 30px;
       min-height: 90px;
     }
-    &.last {
-      opacity: 0;
-      visibility: collapse;
-      height: 0;
-      min-height: 0;
-      margin: 0;
-    }
   }
-  &__tab-pane-link {
-    display: inline-block;
-    font-size: 14px;
-    font-weight: 700;
-    line-height: 22px;
-    color: set-color('black');
+  &__tab-pane-list {
     margin-bottom: 20px;
-    @include for-phone-only {
-      display: block;
-      margin-bottom: 30px;
+    padding-left: 20px;
+    list-style: none;
+    li {
+      font-family: $main-font;
+      font-size: 14px;
+      line-height: 25px;
+      margin-bottom: 20px;
+      position: relative;
+      padding-left: 20px;
+      &::before {
+        content: "\f401";
+        display: block;
+        font-family: "Ionicons";
+        font-size: 14px;
+        line-height: 25px;
+        position: absolute;
+        left: 0;
+        top: 0;
+      }
     }
-    &:hover,
-    &:active,
-    &:focus {
-      color: set-color('black');
-    }
-  }
-  &__tab-pane-price {
-    font-size: 14px;
-    font-weight: 300;
-    line-height: 25px;
-    color: set-color('black');
-    margin-bottom: 0;
-    position: absolute;
-    bottom: 0;
-    left: 0;
   }
   &__more {
     padding: 70px  90px;

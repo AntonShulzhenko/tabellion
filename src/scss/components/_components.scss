@@ -6,9 +6,9 @@
   display: flex;
   justify-content: flex-end;
   &__item {
-    min-width: 280px;
-    margin-left: 85px;
+    margin-left: 35px;
     padding-bottom: 2px;
+    padding-left: 30px;
     text-align: right;
     font-family: $main-font;
     font-weight: 700;
@@ -19,21 +19,19 @@
       margin-left: 0;
     }
     @include for-desktop-only {
-      margin-left: 50px;
+      margin-left: 35px;
     }
     @include for-tablet-landscape-only {
-      min-width: 240px;
-      margin-left: 30px;
+      margin-left: 20px;
+      padding-left: 25px;
     }
     @include for-tablet-portait-only {
       font-size: 0;
-      min-width: auto;
       margin-left: 20px;
       padding-left: 20px;
     }
     @include for-phone-only {
       font-size: 0;
-      min-width: auto;
       margin-left: 20px;
       padding-left: 20px;
     }
@@ -70,7 +68,6 @@
       left: 0;
     }
     &_phone {
-      font-size: 24px;
       @include for-tablet-portait-only {
         font-size: 0;
       }
@@ -88,6 +85,15 @@
         background: {
           image: url(../img/location-svg.svg);
         }
+      }
+    }
+    &_email {
+      &::before {
+        content: "\f422";
+        font-family: "Ionicons";
+        font-size: 24px;
+        font-weight: 300;
+        bottom: 10px;
       }
     }
   }
