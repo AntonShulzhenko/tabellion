@@ -48,6 +48,17 @@
       &__item {
         width: 48%;
         margin-bottom: 30px;
+        &:last-child {
+          margin: 0 0 30px;
+          display: block;
+          .contacts-form__label {
+            margin-bottom: 20px;
+          }
+          .contacts-form__btn {
+            max-width: 100%;
+            margin-left: 0;
+          }
+        }
       }
       &__label {
         margin-bottom: 20px;
@@ -61,7 +72,15 @@
         width: 100%;
         margin-bottom: 30px;
         &:last-child {
-          margin-bottom: 0;
+          margin: 0 0 30px;
+          display: block;
+          .contacts-form__label {
+            margin-bottom: 20px;
+          }
+          .contacts-form__btn {
+            max-width: 100%;
+            margin-left: 0;
+          }
         }
       }
       &__label {

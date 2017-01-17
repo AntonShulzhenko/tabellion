@@ -171,17 +171,21 @@
   background-color: set-color('accent');
   overflow: hidden;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-between;;
+  flex-wrap: wrap;
   &__item {
-    &:first-child,
-    &:last-child {
+    &:not(:last-child) {
       width: 30%;
     }
-    &:nth-child(2) {
-      width: 26%;
-    }
     &:last-child {
-      margin-right: 0;
+      margin: 70px auto 0;
+      width: 50%;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      .contacts-form__label {
+        margin-bottom: 0;
+      }
     }
     .contacts__item {
       margin-left: 0;
@@ -198,6 +202,8 @@
   &__btn {
     padding: 15px;
     width: 100%;
+    max-width: 320px;
+    margin-left: 30px;
   }
 }
 

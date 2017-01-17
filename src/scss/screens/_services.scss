@@ -357,9 +357,6 @@
     @include for-tablet-portait-only {
       padding: 0;
     }
-    @include for-phone-only {
-      padding: 0;
-    }
   }
   &__tab-pane-item {
     width: 100%;
@@ -370,23 +367,14 @@
     text-transform: none;
     line-height: 25px;
     font-weight: 300;
-    @media (min-width: 1320px) and (max-width: 1500px) {
-      max-width: 200px;
-      min-height: 90px;
-    }
-    @include for-tablet-landscape-only {
-      width: calc((100% / 3) - 10px);
-      max-width: 230px;
-    }
-    @include for-tablet-portait-only {
-      width: 50%;
-      max-width: 48%;
-    }
     @include for-phone-only {
-      width: 50%;
-      max-width: 48%;
-      margin-bottom: 30px;
-      min-height: 90px;
+      font-size: 16px;
+      line-height: 25px;
+      padding-left: 15px;
+      letter-spacing: normal;
+      &::before {
+        width: 3px;
+      }
     }
   }
   &__tab-pane-list {
