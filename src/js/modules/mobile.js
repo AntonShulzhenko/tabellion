@@ -11,10 +11,10 @@
     mo.classList.toggle('is-active');
   }
 
-  function showContent(el, attr, text) {
+  function showContent(el, attr, text, descr) {
     el.style.opacity = 1;
     el.setAttribute('href', attr);
-    el.textContent = text;
+    el.innerHTML = text + '<small>' + descr + '</small>';
   }
 
   function hideContent() {
@@ -28,13 +28,13 @@
       if(!e.target.classList.contains('contacts__item')) return;
 
       toggleOverlay();
-      
+
       if(e.target.classList.contains('contacts__item_email')) {
-        showContent(mobileContent, 'mailto:' + email, email);
+        showContent(mobileContent, 'mailto:' + email, email, 'надіслати листа');
       } else if(e.target.classList.contains('contacts__item_phone')) {
-        showContent(mobileContent, 'tel:' + phoneNumber, phoneNumber);
+        showContent(mobileContent, 'tel:' + phoneNumber, phoneNumber, 'зателефонувати');
       } else if(e.target.classList.contains('contacts__item_location')) {
-        showContent(mobileContent, 'http://maps.google.com?q=' + location, location);
+        showContent(mobileContent, 'http://maps.google.com?q=' + location, location, 'побудувати маршрут');
       }
     });
 

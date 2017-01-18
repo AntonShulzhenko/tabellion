@@ -39,6 +39,12 @@
       color: set-color('black');
       text-decoration: none;
     }
+    small {
+      display: block;
+      font-size: 14px;
+      font-weight: 400;
+      margin-top: 5px;
+    }
   }
 }
 .is-active {
