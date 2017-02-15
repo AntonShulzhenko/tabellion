@@ -1,0 +1,217 @@
+.info {
+  background-color: set-color('light-grey');
+  position: relative;
+  padding: 100px 0 100px 260px;
+  @include for-tablet-landscape-only {
+    padding: 60px 0 60px 245px;
+  }
+  @include for-tablet-portait-only {
+    padding: 60px 0;
+  }
+  @include for-phone-only {
+    padding: 0;
+  }
+  &__wrap {
+    padding: 90px 0 170px;
+    position: relative;
+    background-color: set-color('accent');
+    &.faded {
+      &::before,
+      &::after {
+        transition: all 1.5s;
+      }
+      &.out {
+        &::before,
+        &::after {
+          opacity: 0;
+          transform: translateY(50px);
+        }
+      }
+    }
+    @media (min-width: 1200px) and (max-width: 1366px) {
+      padding: 40px;
+    }
+    @include for-tablet-landscape-only {
+      padding: 40px;
+    }
+    @include for-tablet-portait-only {
+      padding: 60px 20px;
+    }
+    @include for-phone-only {
+      padding: 40px 20px;
+    }
+    &::before,
+    &::after {
+      content: "";
+      display: block;
+      height: 100px;
+      background-color: set-color('accent');
+      position: absolute;
+      @media (min-width: 1200px) and (max-width: 1366px) {
+        height: 60px;
+      }
+      @include for-tablet-landscape-only {
+        height: 60px;
+      }
+      @include for-tablet-portait-only {
+        height: 60px;
+      }
+      @include for-phone-only {
+        display: none;
+      }
+    }
+    &::before {
+      width: 890px;
+      top: -100px;
+      left: 0;
+      @media (min-width: 1200px) and (max-width: 1366px) {
+        width: 770px;
+        top: -60px;
+      }
+      @include for-tablet-landscape-only {
+        width: 670px;
+        top: -60px;
+      }
+      @include for-tablet-portait-only {
+        top: -60px;
+        width: 70%;
+      }
+    }
+    &::after {
+      width: 800px;
+      bottom: -100px;
+      left: 890px;
+      @media (min-width: 1200px) and (max-width: 1366px) {
+        left: 770px;
+        bottom: -60px;
+      }
+      @include for-tablet-landscape-only {
+        left: 670px;
+        bottom: -60px;
+      }
+      @include for-tablet-portait-only {
+        bottom: -60px;
+        left: auto;
+        right: 0;
+        width: 70%;
+      }
+    }
+  }
+  &__h2 {
+    padding-left: 0;
+    @include for-tablet-landscape-only {
+      margin-left: 0;
+      line-height: 36px;
+    }
+    @include for-tablet-portait-only {
+      margin: 0 auto;
+      padding-left: 20px;
+      line-height: 36px;
+    }
+    @include for-phone-only {
+      margin: 0 auto 30px;
+    }
+    &::before {
+      display: none;
+    }
+  }
+  .contacts-form {
+    padding-left: 85px;
+    @media (min-width: 1200px) and (max-width: 1366px) {
+      flex-wrap: wrap;
+      max-width: 900px;
+      &__item {
+        width: 48%;
+        margin-bottom: 40px;
+        &:last-child {
+          margin-top: 0;
+          display: block;
+          .contacts-form__label {
+            margin-bottom: 30px;
+          }
+          .contacts-form__btn {
+            max-width: 100%;
+            margin-left: 0;
+          }
+        }
+      }
+    }
+    @include for-tablet-landscape-only {
+      flex-wrap: wrap;
+      max-width: 600px;
+      padding-left: 0;
+      padding-bottom: 0;
+      padding-right: 0;
+      &__item {
+        width: 48%;
+        margin-bottom: 40px;
+        &:last-child {
+          margin-top: 0;
+          display: block;
+          .contacts-form__label {
+            margin-bottom: 30px;
+          }
+          .contacts-form__btn {
+            max-width: 100%;
+            margin-left: 0;
+          }
+        }
+      }
+    }
+    @include for-tablet-portait-only {
+      flex-wrap: wrap;
+      padding: 30px 20px 0;
+      &__item {
+        width: 48%;
+        margin-bottom: 30px;
+        .contacts__item {
+          font-size: 16px;
+          line-height: 24px;
+          &_phone {
+            font-size: 24px;
+          }
+        }
+        &:last-child {
+          margin: 0 0 30px;
+          display: block;
+          .contacts-form__label {
+            margin-bottom: 30px;
+          }
+          .contacts-form__btn {
+            max-width: 100%;
+            margin-left: 0;
+          }
+        }
+      }
+    }
+    @include for-phone-only {
+      flex-wrap: wrap;
+      padding: 0;
+      &__item {
+        width: 100%;
+        margin-bottom: 30px;
+        .contacts__item {
+          font-size: 16px;
+          line-height: 24px;
+          &_phone {
+            font-size: 24px;
+          }
+        }
+        &:last-child {
+          margin: 0;
+          display: block;
+          .contacts-form__label {
+            margin-bottom: 30px;
+          }
+          .contacts-form__btn {
+            max-width: 100%;
+            margin-left: 0;
+          }
+        }
+      }
+      &__label {
+        margin-bottom: 20px;
+      }
+    }
+  }
+}

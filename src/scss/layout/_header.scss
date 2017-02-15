@@ -1,0 +1,161 @@
+.header {
+  width: 100%;
+  height: 100px;
+  background-color: set-color('white');
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40px 0 50px;
+  transition: all 0.25s ease;
+  &.is-scroll {
+    box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+  }
+  @include for-tablet-landscape-only {
+    height: 80px;
+    padding: 0 20px;
+  }
+  @include for-tablet-portait-only {
+    height: 60px;
+    padding: 0 20px;
+    justify-content: flex-end;
+  }
+  @include for-phone-only {
+    height: 60px;
+    padding: 0 20px;
+    justify-content: flex-end;
+  }
+  &__logo {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include for-tablet-portait-only {
+      position: absolute;
+      left: 20px;
+    }
+    @include for-phone-only {
+      position: absolute;
+      left: 20px;
+    }
+  }
+  &__logo-prof {
+    display: block;
+    width: 170px;
+    height: 65px;
+    font-family: $main-font;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.2;
+    text-align: left;
+    background-color: set-color('grey');
+    color: set-color('white');
+    padding: 6px 20px;
+    border-bottom: 3px solid set-color('accent');
+    position: relative;
+    transition: all 0.25s ease;
+    @include for-tablet-landscape-only {
+      width: 105px;
+      height: 50px;
+      font-size: 16px;
+      padding: 5px 10px;
+    }
+    @include for-tablet-portait-only {
+      width: 120px;
+      height: 45px;
+      padding: 5px 10px;
+      font-size: 14px;
+    }
+    @include for-phone-only {
+      width: 120px;
+      height: 45px;
+      font-size: 14px;
+      padding: 5px 10px;
+    }
+    &:hover {
+      color: set-color('grey');
+      background-color: set-color('white');
+      box-shadow: inset 0 0 0 3px set-color('grey');
+      text-decoration: none;
+      border-color: rgba(0,0,0,0);
+    }
+  }
+  &__logo-line {
+    display: block;
+    padding-left: 20px;
+    font-size: 28px;
+    line-height: 1.2;
+    font-weight: 700;
+    font-family: $main-font;
+    color: set-color('grey');
+    @include for-desktop-only {
+      font-size: 24px;
+    }
+    @include for-tablet-landscape-only {
+      font-size: 16px;
+    }
+    @include for-tablet-portait-only {
+      font-size: 16px;
+    }
+    @include for-phone-only {
+      display: none;
+    }
+  }
+  &__logo-overlay {
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color: set-color('white');
+    width: 100%;
+    height: calc(100% + 3px);
+    display: block;
+    z-index: 2;
+    @include for-tablet-portait-only {
+      display: none;
+    }
+    @include for-phone-only {
+      display: none;
+    }
+  }
+  &__menu-btn {
+    display: none;
+    font-size: 20px;
+    line-height: 1;
+    color: set-color('grey');
+    @include for-tablet-portait-only {
+      display: block;
+      margin-left: 20px;
+    }
+    @include for-phone-only {
+      display: block;
+      margin-left: 20px;
+    }
+  }
+  .contacts__item {
+    @include for-tablet-landscape-only {
+      font-size: 13px;
+    }
+    &::after {
+      display: none;
+    }
+    span.line {
+      display: block;
+      width: 100%;
+      height: 1px;
+      background-color: rgba(set-color('grey'), 0.37);
+      position: absolute;
+      left: 0;
+      bottom: 0;
+    }
+  }
+  .h-lg {
+    @media (min-width: 1440px) {
+      display: none;
+    }
+  }
+}

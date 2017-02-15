@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tabellion</title>
+    <meta name="format-detection" content="telephone=no">
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+
+    <!-- build:css css/vendor.min.css -->
+    <link type="text/css" href="css/jquery.jscrollpane.css" rel="stylesheet" >
+    <link type="text/css" href="css/dataurl.css" rel="stylesheet" >
+    <!-- endbuild -->
+
+    <!-- build:css css/main.min.css -->
+    <link href="css/main.css" rel="stylesheet"></link>
+    <!-- endbuild -->
+
+    <!-- build:js js/modernizr.min.js -->
+    <script src="libs/modernizr.min.js"></script>
+    <!-- endbuild -->
+
+    <!-- build:js js/pace.min.js -->
+    <script src="libs/pace.min.js"></script>
+    <!-- endbuild -->
+  </head>
+  <body>
+    <div id="loader"></div>
+    <div id="docTop"></div>
+
+    <div class="mobile-overlay">
+      <div class="mobile-overlay__close"><i class="ion-android-close"></i></div>
+      <a href="#" class="mobile-overlay__content"></a>
+    </div>
+
+    <header class="header">
+      <div class="header__logo">
+        <span class="header__logo-prof">Приватний<br> нотаріус</span>
+        <span class="header__logo-line">Чуловський<br class="h-lg"> Володимир Анатолійович</span>
+        <span class="header__logo-overlay"></span>
+      </div>
+
+      <ul class="contacts">
+        <li class="contacts__item contacts__item_location">01001, м.Київ, пров. Музейний, 10<span class="line"></span></li>
+        <li class="contacts__item contacts__item_email">fides.rk@gmail.com<span class="line"></span></li>
+        <li class="contacts__item contacts__item_phone">093-625-0000<span class="line"></span></li>
+      </ul>
+
+      <div class="header__menu-btn">
+        <i class="fa fa-bars" aria-hidden="true"></i>
+      </div>
+    </header>
+
+    <nav class="nav">
+      <ul class="nav__list">
+        <li class="nav__item"><a href="#services" class="nav__link scrollTo">Послуги</a></li>
+        <li class="nav__item"><a href="#about" class="nav__link scrollTo">Про нас</a></li>
+        <li class="nav__item"><a href="#faq" class="nav__link scrollTo">Питання - відповідь</a></li>
+        <li class="nav__item"><a href="#contacts" class="nav__link scrollTo">Контакти</a></li>
+        <!-- <li class="nav__item"><a href="#" class="nav__link nav__link_ask">Відправити запитання</a></li> -->
+      </ul>
+
+      <div class="nav__toggle"><i class="fa fa-angle-right" aria-hidden="true"></i></div>
+    </nav>
+
+    <article class="main">
+      <section class="first">
+        <div class="container-fluid">
+          <h1 class="first__h1">Нотаріальні<br> послуги в центрі Києва</h1>
+
+          <div class="row">
+            <div class="col-lg-5">
+              <div class="first__services">
+                <ul class="first__ul">
+                  <li class="first__li">Нотаріальні<br> дії</li>
+                  <li class="first__li">Реєстрація у<br> ДРЮОФОПГФ</li>
+                  <li class="first__li">Реєстрація<br> речових прав</li>
+                </ul>
+
+                <a href="#services" class="button first__btn scrollTo">Обрати послугу</a>
+              </div>
+            </div>
+
+            <div class="col-lg-5">
+              <p class="first__lead margin-left-45"><span>Швидке рішення</span><br> <span>нотаріальних питань</span></p>
+
+              <div class="first__services-amount margin-left-45">
+                <span>більше</span>
+                <span>50</span>
+                <span>послуг</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="services" id="services">
+        <div class="services__sidebar faded">
+          <img src="img/list.svg" alt="" class="services__logo margin-left-30">
+          <h4 class="services__h4">Весь спектр нотаріальних<br> послуг</h4>
+          <p class="services__p">Для наших клієнтів ми гарантуємо професіоналізм, конфіденційність, оперативність, доброзичливість, увагу і розуміння.</p>
+          <p class="services__p bold main-font">Цiнуємо кожного клиента</p>
+        </div>
+
+        <div class="services__content faded faded_delay">
+          <div class="services__tabs tabs">
+            <!-- Nav tabs -->
+            <ul class="services__nav-tabs nav-tabs clearfix" role="tablist">
+              <li role="presentation" class="active">
+                <a href="#service-cat-1" aria-controls="service-cat-1" role="tab" data-toggle="tab"><span>Нотаріальні<br> дії<span>01</span></span></a>
+              </li>
+              <li role="presentation">
+                <a href="#service-cat-2" aria-controls="service-cat-2" role="tab" data-toggle="tab"><span>Реєстрація у<br> ДРЮОФОПГФ<span>02</span></span></a>
+              </li>
+              <li role="presentation">
+                <a href="#service-cat-3" aria-controls="service-cat-3" role="tab" data-toggle="tab"><span>Реєстрація<br> речових прав<span>03</span></span></a>
+              </li>
+            </ul>
+
+            <!-- Tab panes -->
+            <div class="scroll-container">
+              <div class="services__tab-content tab-content">
+                <div role="tabpanel" class="services__tab-pane tab-pane active" id="service-cat-1">
+                  <p class="services__tab-pane-item">Посвідчення правочинів (договорів, заповітів, довіреностей тощо).</p>
+                  <p class="services__tab-pane-item">Вживання заходів щодо охорони спадкового майна.</p>
+                  <p class="services__tab-pane-item">Видача свідоцтва про право на спадщину.</p>
+                  <p class="services__tab-pane-item">Видача свідоцтва про право власності на частку в спільному майні подружжя в разі смерті одного з подружжя.</p>
+                  <p class="services__tab-pane-item">Видача свідоцтва про придбання майна з прилюдних торгів (аукціонів).</p>
+                  <p class="services__tab-pane-item">Видача свідоцтва про придбання майна з прилюдних торгів (аукціонів), якщо прилюдні торги (аукціони) не відбулися.</p>
+                  <p class="services__tab-pane-item">Проведення опису майна фізичної особи, яка визнана безвісно відсутньою або місце перебування якої невідоме.</p>
+                  <p class="services__tab-pane-item">Видача дублікатів нотаріальних документів, що зберігаються у справах нотаріуса.</p>
+                  <p class="services__tab-pane-item">Накладення заборони щодо відчуження нерухомого майна (майнових прав на нерухоме майно), що підлягає державній реєстрації.</p>
+                  <p class="services__tab-pane-item">Засвідчення вірності копій (фотокопій) документів і виписок з них.</p>
+                  <p class="services__tab-pane-item">Засвідчення справжності підпису на документах.</p>
+                  <p class="services__tab-pane-item">Засвідчення вірності перекладу документів з однієї мови на іншу.</p>
+                  <p class="services__tab-pane-item">Посвідчення факту, що фізична чи юридична особа є виконавцем заповіту.</p>
+                  <p class="services__tab-pane-item">Посвідчення факту, що фізична особа є живою.</p>
+                  <p class="services__tab-pane-item">Посвідчення факту перебування фізичної особи в певному місці.</p>
+                  <p class="services__tab-pane-item">Посвідчення часу пред'явлення документів.</p>
+                  <p class="services__tab-pane-item">Передача заяв фізичних та юридичних осіб іншим фізичним та юридичним особам.</p>
+                  <p class="services__tab-pane-item">Приймання у депозит грошових сум та цінних паперів.</p>
+                  <p class="services__tab-pane-item">Вчинення виконавчих написів.</p>
+                  <p class="services__tab-pane-item">Вчинення протестів векселів.</p>
+                  <p class="services__tab-pane-item">Вчинення морських протестів.</p>
+                  <p class="services__tab-pane-item">Приймання на зберігання документів.</p>
+                </div>
+
+                <div role="tabpanel" class="services__tab-pane tab-pane" id="service-cat-2">
+                  <p class="services__tab-pane-item">Державна реєстрація створення юридичної особи (у тому числі в результаті виділу, злиття, перетворення, поділу).</p>
+                  <p class="services__tab-pane-item">Державна реєстрація змін до відомостей про юридичну особу (у тому числі змін до установчих документів юридичної особи).</p>
+                  <p class="services__tab-pane-item">Державна реєстрація переходу юридичної особи на діяльність на підставі модельного статуту.</p>
+                  <p class="services__tab-pane-item">Державна реєстрація переходу юридичної особи з модельного статуту на діяльність на підставі власного установчого документа.</p>
+                  <p class="services__tab-pane-item">Державна реєстрація рішення про виділ юридичної особи.</p>
+                  <p class="services__tab-pane-item">Державна реєстрація рішення про припинення юридичної особи, прийнятого її учасниками або відповідним органом юридичної особи.</p>
+                  <p class="services__tab-pane-item">Державна реєстрація рішення про відміну рішення про припинення юридичної особи, прийнятого її учасниками або відповідним органом юридичної особи.</p>
+                  <p class="services__tab-pane-item">Державна реєстрація зміни складу комісії з припинення (комісії з реорганізації, ліквідаційної комісії), голови комісії або ліквідатора.</p>
+                  <p class="services__tab-pane-item">Державна реєстрація припинення юридичної особи в результаті її ліквідації.</p>
+                  <p class="services__tab-pane-item">Державна реєстрація припинення юридичної особи в результаті її реорганізації.</p>
+                  <p class="services__tab-pane-item">Державна реєстрація створення відокремленого підрозділу юридичної особи.</p>
+                  <p class="services__tab-pane-item">Державна реєстрація змін до відомостей про відокремлений підрозділ юридичної особи.</p>
+                  <p class="services__tab-pane-item">Державна реєстрація припинення відокремленого підрозділу юридичної особи.</p>
+                  <p class="services__tab-pane-item">Державна реєстрація фізичної особи – підприємця.</p>
+                  <p class="services__tab-pane-item">Державна реєстрація змін до відомостей про фізичну особу – підприємця.</p>
+                  <p class="services__tab-pane-item">Державна реєстрація припинення підприємницької діяльності фізичної особи – підприємця.</p>
+                </div>
+
+                <div role="tabpanel" class="services__tab-pane tab-pane" id="service-cat-3">
+                  <p class="services__tab-pane-item">Право власності.</p>
+                  <p class="services__tab-pane-item">Речові права, похідні від права власності:</p>
+                  <ul class="services__tab-pane-list">
+                    <li>право користування (сервітут);</li>
+                    <li>право користування земельною ділянкою для сільськогосподарських потреб (емфітевзис);</li>
+                    <li>право забудови земельної ділянки (суперфіцій);</li>
+                    <li>право господарського відання;</li>
+                    <li>право оперативного управління;</li>
+                    <li>право постійного користування та право оренди (суборенди) земельної ділянки;</li>
+                    <li>право користування (найму, оренди) будівлею або іншою капітальною спорудою (їх окремою частиною), що виникає на підставі договору найму (оренди) будівлі або іншої капітальної споруди (їх окремої частини), укладеного на строк не менш як три роки;</li>
+                    <li>іпотека;</li>
+                    <li>право довірчої власності;</li>
+                    <li>інші речові права відповідно до закону;</li>
+                  </ul>
+                  <p class="services__tab-pane-item">Право власності на об’єкт незавершеного будівництва.</p>
+                  <p class="services__tab-pane-item">Заборона відчуження та арешт нерухомого майна, податкова застава, предметом якої є нерухоме майно, та інші обтяження.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- <div class="services__more">
+              <a href="#">Ще 12 послуг</a>
+            </div> -->
+          </div>
+        </div>
+      </section>
+
+      <section class="info">
+        <div class="info__wrap faded">
+          <h2 class="info__h2 margin-left-85 faded">Щоб скористатися послугами</h2>
+
+          <div class="contacts-form faded faded_delay">
+            <div class="contacts-form__item">
+              <p class="contacts-form__label">Відвідайте наш офіс<br> в центрі міста</p>
+              <p class="contacts__item contacts__item_location">01001, м.Київ, пров. Музейний, 10</p>
+            </div>
+
+            <div class="contacts-form__item">
+              <p class="contacts-form__label">Проконсультуйтесь з нотаріусом<br> за телефоном</p>
+              <p class="contacts__item contacts__item_phone">093-625-0000</p>
+            </div>
+
+            <div class="contacts-form__item">
+              <p class="contacts-form__label">Відправте питання<br> на електронну адресу</p>
+              <p class="contacts__item contacts__item_email">fides.rk@gmail.com</p>
+            </div>
+
+            <div class="contacts-form__item">
+              <p class="contacts-form__label">Заповніть заявку на сайті</p>
+              <button class="button contacts-form__btn" data-toggle="modal" data-target="#modal-form">Заповнити заявку</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="about" id="about">
+        <div class="container-fluid">
+          <div class="about__heading faded">
+            <h2 class="about__h2">Про «табеліон»</h2>
+            <span>приватний нотаріус Київського міського нотаріального округу</span>
+          </div>
+
+          <div class="row">
+            <div class="col-lg-4">
+              <p class="about__p about__p_lead faded">Будь-яка людина, хоча б інколи потребує кваліфікованої нотаріальної допомоги: завірення копій документів, оформлення довіреностей та заяв, дозволів для виїзду дитини за кордон, переоформлення майна, отримання спадщини та навіть проста порада або консультація.</p>
+            </div>
+
+            <div class="col-lg-8">
+              <p class="about__p faded faded_delay">Для того щоб кожен наш клієнт отримував лише найякісніші нотаріальні послуги, ми постаралися найбільш оптимально налагодити роботу персоналу офісу. До нашої команди відбираються лише кваліфіковані фахівці.  Кожен з них є досвідченим фахівцем в одному із напрямів нотаріальної діяльності, наприклад, оформлення спадщини, засвідчення договорів, подружні договірні взаємовідносини та багато інших. Ви можете бути впевнені, що в нас отримаєте кваліфіковану допомогу та всі необхідні нотаріальні послуги.</p>
+
+              <p class="about__p faded">Кожному клієнту ми гарантуємо професійне відношення, збереження конфіденційної інформації, оперативне виконання всіх операцій та завжди доброзичливість, уважне відношення і повне розуміння будь-якої ситуації. Кожен клієнт для нас важливий і кожного ми дуже цінуємо.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="faq" id="faq">
+        <div class="container-fluid">
+          <h2 class="faq__h2 faded">Питання відповідь</h2>
+
+          <div class="row">
+            <div class="col-lg-5 col-lg-push-6">
+              <!-- <div class="accordion-wrap faded faded_delay">
+                <p class="faq__p faq__p_italic">Ми підгототували список відповідей на найпоширеніші питання. Скористайтеся цією інформацією і це дозволить вам зекономити час</p>
+
+                <div class="accordion faded" id="accordion" role="tablist" aria-multiselectable="true">
+                  <div class="panel accordion__item">
+                    <a class="accordion__link" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-1" aria-expanded="true" aria-controls="collapse-1" role="tab">Чи зможу я отримати у Вас консультацію? Скільки вона буде коштувати?</a>
+
+                    <div id="collapse-1" class="panel-collapse collapse accordion__content in" role="tabpanel">
+                      <span class="close" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-1" aria-expanded="true" aria-controls="collapse-1" role="tab"></span>
+                      Як і всі нотаріуси Києва, надаю весь спектр нотаріальних послуг - це і оформлення будь-яких договорів: купівлі-продажу (купівля-продаж), дарування (дарчим), міни, іпотеки, довічного утримання, спадкові договори, оренди , як рухомого так і нерухомого майна, а також оформлення спадщини, заповіту, заяв, довіреностей, засвідчення копій документів.
+                    </div>
+                  </div>
+
+                  <div class="panel accordion__item">
+                    <a class="accordion__link collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-2" aria-expanded="false" aria-controls="collapse-2" role="tab">Ви працюєте у вихідні дні?</a>
+
+                    <div id="collapse-2" class="panel-collapse collapse accordion__content" role="tabpanel">
+                      <span class="close" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-2" aria-expanded="false" aria-controls="collapse-2" role="tab"></span>
+                      Як і всі нотаріуси Києва, надаю весь спектр нотаріальних послуг - це і оформлення будь-яких договорів: купівлі-продажу (купівля-продаж), дарування (дарчим), міни, іпотеки, довічного утримання, спадкові договори, оренди , як рухомого так і нерухомого майна, а також оформлення спадщини, заповіту, заяв, довіреностей, засвідчення копій документів.
+                    </div>
+                  </div>
+
+                  <div class="panel accordion__item">
+                    <a class="accordion__link collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-3" aria-expanded="false" aria-controls="collapse-3" role="tab">Як прискорити оформлення документів?</a>
+
+                    <div id="collapse-3" class="panel-collapse collapse accordion__content" role="tabpanel">
+                      <span class="close" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-3" aria-expanded="false" aria-controls="collapse-3" role="tab"></span>
+                      Як і всі нотаріуси Києва, надаю весь спектр нотаріальних послуг - це і оформлення будь-яких договорів: купівлі-продажу (купівля-продаж), дарування (дарчим), міни, іпотеки, довічного утримання, спадкові договори, оренди , як рухомого так і нерухомого майна, а також оформлення спадщини, заповіту, заяв, довіреностей, засвідчення копій документів.
+                    </div>
+                  </div>
+
+                  <div class="panel accordion__item">
+                    <a class="accordion__link collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-4" aria-expanded="false" aria-controls="collapse-4" role="tab">Як прискорити оформлення документів?</a>
+
+                    <div id="collapse-4" class="panel-collapse collapse accordion__content" role="tabpanel">
+                      <span class="close" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-4" aria-expanded="false" aria-controls="collapse-4" role="tab"></span>
+                      Як і всі нотаріуси Києва, надаю весь спектр нотаріальних послуг - це і оформлення будь-яких договорів: купівлі-продажу (купівля-продаж), дарування (дарчим), міни, іпотеки, довічного утримання, спадкові договори, оренди , як рухомого так і нерухомого майна, а також оформлення спадщини, заповіту, заяв, довіреностей, засвідчення копій документів.
+                    </div>
+                  </div>
+                </div>
+              </div> -->
+
+              <p class="faq__p faq__p_lg faded"><span class="bold text-uppercase">Табелiон</span> - (вiд лат. tabellio) - в Стародавньому Римi нотарiус вважався приватним писарем, який за грошову плату готував необхідні письмовi документи для сторiн.</p>
+
+              <p class="faq__p faq__p_lg faded faded_delay">Час вiд часу табелiону доводилося свідчити про зміст і справжнiсть документа, тому вiд нього була потрiбна абсолютна чеснiсть. При Юстиніані потрібен був офіційний дозвіл займатися цією професією.</p>
+            </div>
+
+            <div class="col-lg-5 col-lg-pull-5">
+              <form action="" class="send-form faded">
+                <h3 class="send-form__h3">Надішліть нам своє питання за допомогою форми.</h3>
+                <label class="send-form__label send-form__label_textarea">
+                  <textarea name="textarea" class="send-form__textarea" placeholder="Текст вашого запитання"></textarea>
+                  <p class="send-form__error">* Поле обов'язкове до заповнення</p>
+                </label>
+                <label class="send-form__label send-form__label_name">
+                  <input type="text" class="send-form__name" name="name" placeholder="Ваше імя (як до Вас звертатися?)">
+                  <p class="send-form__error">* Поле обов'язкове до заповнення</p>
+                </label>
+                <label class="send-form__label send-form__label_email">
+                  <input type="email" class="send-form__email" name="email" placeholder="Електронна адреса для віподвіді">
+                  <p class="send-form__error">* Поле обов'язкове до заповнення</p>
+                </label>
+                <button type="submit" class="button send-form__btn">Відправити</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="contacts-section" id="contacts">
+        <h2 class="contacts-section__h2 faded">Контактні дані</h2>
+
+        <div id="map"></div>
+
+        <div class="contacts-form faded">
+          <div class="contacts-form__item">
+            <p class="contacts-form__label">Відвідайте наш офіс<br> в центрі міста</p>
+            <p class="contacts__item contacts__item_location">01001, м.Київ, пров. Музейний, 10</p>
+          </div>
+
+          <div class="contacts-form__item">
+            <p class="contacts-form__label">Відправте питання<br> на електронну адресу</p>
+            <p class="contacts__item contacts__item_email">fides.rk@gmail.com</p>
+          </div>
+
+          <div class="contacts-form__item">
+            <p class="contacts-form__label">Проконсультуйтесь з нотаріусом<br> за телефоном</p>
+            <p class="contacts__item contacts__item_phone">093-625-0000</p>
+          </div>
+
+          <div class="contacts-form__item">
+            <p class="contacts-form__label">Заповніть заявку на сайті</p>
+            <button class="button contacts-form__btn" data-toggle="modal" data-target="#modal-form">Заповнити заявку</button>
+          </div>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <div class="footer__wrap">
+          <p><i class="fa fa-copyright" aria-hidden="true"></i> 2016  — Табеліон. Всі права захищено</p>
+        </div>
+      </footer>
+
+      <a href="#docTop" class="go-top scrollTo">
+        <i class="fa fa-long-arrow-up" aria-hidden="true"></i>
+      </a>
+    </article>
+
+    <!-- Modal -->
+    <div class="modal fade" id="modal-form" tabindex="-1" role="dialog" aria-labelledby="modal-formLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-body">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><i class="ion-ios-close-empty"></i></span></button>
+            <form action="" class="send-form send-form_modal">
+              <label class="send-form__label send-form__label_textarea">
+                <textarea name="textarea" class="send-form__textarea" placeholder="Текст вашого запитання"></textarea>
+                <p class="send-form__error">* Поле обов'язкове до заповнення</p>
+              </label>
+              <label class="send-form__label send-form__label_name">
+                <input type="text" class="send-form__name" name="name" placeholder="Ваше імя (як до Вас звертатися?)">
+                <p class="send-form__error">* Поле обов'язкове до заповнення</p>
+              </label>
+              <label class="send-form__label send-form__label_email">
+                <input type="email" class="send-form__email" name="email" placeholder="Електронна адреса для віподвіді">
+                <p class="send-form__error">* Поле обов'язкове до заповнення</p>
+              </label>
+              <button type="submit" class="button send-form__btn">Відправити</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- build:js js/vendor.min.js -->
+    <script src="libs/jquery.min.js"></script>
+    <script src="libs/bootstrap.min.js"></script>
+    <script src="libs/jquery.mousewheel.min.js"></script>
+    <script src="libs/jquery.jscrollpane.min.js"></script>
+    <script src="libs/wow.min.js"></script>
+    <script src="libs/TweenMax.min.js"></script>
+    <script src="libs/TimelineMax.min.js"></script>
+    <script src="libs/ScrollMagic.min.js"></script>
+    <!-- endbuild -->
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVMsXwFBeB5_5x5398fedRXSMBsB7P0EM&callback=initMap"
+    async defer></script>
+
+    <!-- build:js js/main.min.js -->
+    <script src="js/main.js"></script>
+    <!-- endbuild -->
+  </body>
+</html>

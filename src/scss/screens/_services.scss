@@ -1,0 +1,520 @@
+.services {
+  padding: 145px 0 0 340px;
+  display: flex;
+  justify-content: flex-start;
+  position: relative;
+  overflow: hidden;
+  @include for-desktop-only {
+    padding-top: 80px;
+  }
+  @media (max-width: 1319px) {
+    flex-wrap: wrap;
+  }
+  @include for-tablet-landscape-only {
+    padding-left: 245px;
+  }
+  @include for-tablet-portait-only {
+    padding: 60px 0 0;
+  }
+  @include for-phone-only {
+    padding: 60px 0 0;
+  }
+  &::before {
+    content: "";
+    display: block;
+    width: 260px;
+    height: 94px;
+    background-color: set-color('light-grey');
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    @include for-phone-only {
+      display: none;
+    }
+  }
+  &::after {
+    content: "";
+    display: block;
+    width: 370px;
+    height: 130px;
+    background-color: set-color('white');
+    position: absolute;
+    left: 1550px;
+    top: 145px;
+    @include for-desktop-only {
+      top: 80px;
+    }
+  }
+  &__sidebar {
+    width: 220px;
+    margin-right: 65px;
+    padding-top: 55px;
+    background-color: set-color('white');
+    @media (min-width: 1320px) and (max-width: 1500px) {
+      width: 200px;
+      margin-right: 30px;
+      padding-top: 0;
+    }
+    @media (max-width: 1319px) {
+      width: 100%;
+      margin-right: auto;
+      margin-bottom: 40px;
+      padding-top: 0;
+      overflow: hidden;
+    }
+    @include for-tablet-portait-only {
+      padding: 0 20px;
+    }
+    @include for-phone-only {
+      padding: 0 20px;
+      margin-bottom: 20px;
+    }
+  }
+  &__content {
+    width: calc(100% - 285px);
+    background-color: set-color('light-grey');
+    padding-bottom: 150px;
+    padding-right: 20px;
+    position: relative;
+    @media (min-width: 1320px) and (max-width: 1500px) {
+      width: calc(100% - 230px);
+    }
+    @media (max-width: 1319px) {
+      width: 100%;
+    }
+    @include for-tablet-portait-only {
+      padding: 0 20px 80px;
+    }
+    @include for-phone-only {
+      padding: 0 20px 80px;
+    }
+  }
+  &__tabs {
+    max-width: 940px;
+    transition: background 0.3s ease;
+    @include for-phone-only {
+      position: relative;
+    }
+    &:hover {
+      background-color: #eee;
+      .scroll-container .jspVerticalBar {
+        width: 15px;
+      }
+    }
+    &::after {
+      content: "";
+      display: none;
+      width: 100%;
+      height: 20px;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: -moz-linear-gradient(top,  rgba(255,255,255,0) 0%, rgba(249,249,249,1) 100%);
+      background: -webkit-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(249,249,249,1) 100%);
+      background: linear-gradient(to bottom,  rgba(255,255,255,0) 0%,rgba(249,249,249,1) 100%);
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#f9f9f9',GradientType=0 );
+      @include for-phone-only {
+        display: block;
+      }
+    }
+  }
+  &__logo {
+    max-width: 60px;
+    margin-bottom: 75px;
+    @media (max-width: 1319px) {
+      margin: 0 30px 0 0;
+      float: left;
+    }
+  }
+  &__h4 {
+    font-size: 18px;
+    line-height: 24px;
+    text-transform: none;
+    letter-spacing: 1px;
+    @media (max-width: 1319px) {
+      width: calc(50% - 90px);
+      margin: 0 0 30px 0;
+      font-size: 24px;
+      line-height: 30px;
+      float: left;
+    }
+    @include for-tablet-portait-only {
+      width: calc(100% - 90px);
+    }
+    @include for-phone-only {
+      width: calc(100% - 90px);
+    }
+  }
+  &__p {
+    margin-left: 30px;
+    margin-top: 30px;
+    font-size: 14px;
+    line-height: 25px;
+    @media (max-width: 1319px) {
+      margin-left: 30px;
+      float: left;
+      width: calc(50% - 90px);
+      margin-top: 0;
+      &:last-child {
+        margin: 0 0 30px 90px;
+        clear: both;
+      }
+    }
+    @include for-tablet-portait-only {
+      margin: 0 0 30px 0;
+      width: 100%;
+      padding-left: 90px;
+      &:last-child {
+        margin-left: 0;
+      }
+    }
+    @include for-phone-only {
+      margin: 0 0 30px 0;
+      width: 100%;
+      padding-left: 90px;
+      &:last-child {
+        margin-left: 0;
+      }
+    }
+    @media (max-width: 420px) {
+      padding-left: 0;
+    }
+  }
+  &__nav-tabs {
+    border: none;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    > li {
+      margin: 0;
+      width: calc(100% / 3);
+      @include for-phone-only {
+        width: 100%;
+        max-width: 420px;
+        float: none;
+        margin: 0 auto;
+      }
+      > a {
+        padding: 40px;
+        display: block;
+        border: none;
+        margin: 0;
+        background-color: set-color('white');
+        font-family: $main-font;
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 25px;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        color: set-color('black');
+        transition: all 0.25s ease;
+        @media (min-width: 1320px) and (max-width: 1500px) {
+          padding: 30px 20px;
+          font-size: 16px;
+          line-height: 20px;
+          letter-spacing: 1px;
+        }
+        @include for-tablet-landscape-only {
+          padding: 15px;
+          font-size: 14px;
+          line-height: 20px;
+          letter-spacing: 1px;
+        }
+        @include for-tablet-portait-only {
+          padding: 15px;
+          font-size: 14px;
+          line-height: 20px;
+          letter-spacing: 1px;
+        }
+        @include for-phone-only {
+          padding: 20px;
+        }
+        &:hover {
+          text-decoration: none;
+          color: set-color('black');
+          > span {
+            &::before {
+              height: 4px;
+              background-color: set-color('accent');
+            }
+          }
+        }
+        > span {
+          display: block;
+          padding-right: 68px;
+          position: relative;
+          transition: all 0.25s ease;
+          &::before {
+            height: 4px;
+            background-color: set-color('accent');
+          }
+          &::before {
+            content: "";
+            display: block;
+            width: 100%;
+            height: 2px;
+            background-color: rgba(set-color('black'), 0.28);
+            position: absolute;
+            left: 0;
+            bottom: -4px;
+            transition: all 0.25s ease;
+          }
+          > span {
+            display: block;
+            position: absolute;
+            right: 0;
+            bottom: 8px;
+            width: 60px;
+            height: 30px;
+            box-shadow: inset 0 0 0 1px set-color('accent');
+            text-align: right;
+            padding-right: 5px;
+            font-size: 24px;
+            line-height: 30px;
+            transition: all 0.25s ease;
+            @include for-tablet-portait-only {
+              width: 40px;
+              height: 25px;
+              font-size: 20px;
+              line-height: 25px;
+            }
+            &::before {
+              content: "\f3d6";
+              font-family: "Ionicons";
+              font-size: 24px;
+              font-weight: 300;
+              line-height: 30px;
+              position: absolute;
+              left: -7px;
+              top: 0;
+            }
+          }
+        }
+      }
+      &.active {
+        > a {
+          border: none;
+          background-color: set-color('light-grey');
+          text-decoration: none;
+          color: set-color('black');
+          > span {
+            &::before {
+              height: 4px;
+              background-color: set-color('accent');
+            }
+            > span {
+              background-color: set-color('accent');
+              bottom: 0;
+              height: 38px;
+              @include for-tablet-portait-only {
+                height: 33px;
+              }
+            }
+          }
+          &:hover,
+          &:focus {
+            border: none;
+            background-color: set-color('light-grey');
+            text-decoration: none;
+            color: set-color('black');
+            > span {
+              &::before {
+                height: 4px;
+                background-color: set-color('accent');
+              }
+              > span {
+                background-color: set-color('accent');
+                bottom: 0;
+                height: 38px;
+                @include for-tablet-portait-only {
+                  height: 33px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  &__tab-content {
+    padding: 0 25px;
+    @include for-tablet-landscape-only {
+      padding: 0;
+    }
+    @include for-phone-only {
+      padding: 0;
+    }
+    > .services__tab-pane.active {
+      display: flex;
+    }
+  }
+  &__tab-pane {
+    padding: 0 15px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    @include for-tablet-portait-only {
+      padding: 0;
+    }
+  }
+  &__tab-pane-item {
+    width: 100%;
+    margin-bottom: 30px;
+    position: relative;
+    @extend h4;
+    letter-spacing: 1px;
+    text-transform: none;
+    line-height: 25px;
+    font-weight: 300;
+    @include for-phone-only {
+      font-size: 16px;
+      line-height: 25px;
+      padding-left: 15px;
+      letter-spacing: normal;
+      &::before {
+        width: 3px;
+      }
+    }
+  }
+  &__tab-pane-list {
+    margin-bottom: 20px;
+    padding-left: 20px;
+    list-style: none;
+    li {
+      font-family: $main-font;
+      font-size: 14px;
+      line-height: 25px;
+      margin-bottom: 20px;
+      position: relative;
+      padding-left: 20px;
+      &::before {
+        content: "\f401";
+        display: block;
+        font-family: "Ionicons";
+        font-size: 14px;
+        line-height: 25px;
+        position: absolute;
+        left: 0;
+        top: 0;
+      }
+    }
+  }
+  &__more {
+    padding: 70px  90px;
+    text-align: center;
+    background-color: set-color('light-grey');
+    @include for-phone-only {
+      padding: 50px 0 100px;
+    }
+    a {
+      display: inline-block;
+      font-family: $main-font;
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 30px;
+      color: set-color('black');
+      border-bottom: 1px dashed set-color('black');
+      position: relative;
+      transition: all 0.25s ease;
+      &::after {
+        content: "\f3d4";
+        margin-top: 10px;
+        font-family: "Ionicons";
+        font-size: 30px;
+        font-weight: 300;
+        line-height: 1;
+        display: block;
+        position: absolute;
+        left: 50%;
+        transform: translate3d(-50%, 0, 0);
+        transition: all 0.25s ease;
+      }
+      &:hover,
+      &:active,
+      &:focus {
+        text-decoration: none;
+        color: set-color('black');
+        border-color: transparent;
+        &::after {
+          color: set-color('accent');
+          transform: translate3d(-50%, 10px, 0);
+        }
+      }
+    }
+  }
+  .scroll-container {
+    height: 540px;
+    margin-top: 60px;
+    overflow-x: hidden;
+    position: relative;
+    &::after {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 20px;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: -moz-linear-gradient(top,  rgba(255,255,255,0) 0%, rgba(249,249,249,1) 100%);
+      background: -webkit-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(249,249,249,1) 100%);
+      background: linear-gradient(to bottom,  rgba(255,255,255,0) 0%,rgba(249,249,249,1) 100%);
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#f9f9f9',GradientType=0 );
+      @include for-phone-only {
+        display: none;
+      }
+    }
+    @include for-tablet-portait-only {
+      margin-top: 40px;
+    }
+    @include for-phone-only {
+      height: auto;
+      max-height: 400px;
+      margin-top: 30px;
+    }
+    .jspVerticalBar {
+      width: 10px;
+      background-color: transparent;
+      transition: width 0.3s ease;
+    }
+    .jspTrack {
+      background-color: transparent;
+      opacity: 1;
+      &::before {
+        content: "";
+        display: block;
+        width: 1px;
+        height: 100%;
+        background-color: set-color('black');
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+    .jspDrag {
+      background-color: set-color('grey');
+      border-radius: 5px;
+      position: relative;
+      &::before,
+      &::after {
+        display: block;
+        font-family: "Ionicons";
+        font-size: 12px;
+        color: set-color('accent');
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      &::before {
+        content: "\f365";
+        top: 0;
+      }
+      &::after {
+        content: "\f35f";
+        bottom: 0;
+      }
+    }
+  }
+}

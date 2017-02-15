@@ -1,0 +1,4 @@
+// Set Color
+@function set-color($key: 'black') {
+  @return map-get($tabellion-colors, $key);
+}

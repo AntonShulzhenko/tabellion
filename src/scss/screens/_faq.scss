@@ -1,0 +1,139 @@
+.faq {
+  padding: 140px 0 230px 340px;
+  background-color: set-color('white');
+  @media (min-width: 1200px) and (max-width: 1366px) {
+    padding: 100px 0 100px 340px;
+  }
+  @include for-tablet-landscape-only {
+    padding: 100px 0 100px 245px;
+  }
+  @include for-tablet-portait-only {
+    padding: 60px 5px;
+  }
+  @include for-phone-only {
+    padding: 60px 5px;
+  }
+  &__h2 {
+    margin-bottom: 90px;
+    @media (min-width: 1200px) and (max-width: 1366px) {
+      margin-bottom: 60px;
+    }
+    @include for-tablet-landscape-only {
+      margin-bottom: 60px;
+    }
+    @include for-tablet-portait-only {
+      margin-bottom: 60px;
+    }
+    @include for-phone-only {
+      margin-bottom: 40px;
+    }
+  }
+  &__p {
+    font-size: 16px;
+    line-height: 24px;
+    &_italic {
+      font-style: italic;
+    }
+    &_lg {
+      font-size: 20px;
+      line-height: 36px;
+      margin-bottom: 30px;
+      @include for-tablet-portait-only {
+        font-size: 18px;
+      }
+      @include for-phone-only {
+        font-size: 16px;
+        line-height: 25px;
+      }
+    }
+  }
+  .accordion-wrap {
+    max-width: 600px;
+    .faq__p {
+      padding-left: 25px;
+      margin-bottom: 90px;
+      @include for-tablet-landscape-only {
+        margin-bottom: 60px;
+      }
+      @include for-tablet-portait-only {
+        margin-bottom: 60px;
+      }
+      @include for-phone-only {
+        margin-bottom: 30px;
+      }
+    }
+  }
+  .send-form {
+    max-width: 600px;
+    @media (min-width: 1200px) and (max-width: 1366px) {
+      padding: 30px 40px 0;
+      &__h3 {
+        font-size: 20px;
+        line-height: 30px;
+      }
+    }
+    @include for-tablet-landscape-only {
+      margin-top: 90px;
+    }
+    @include for-tablet-portait-only {
+      margin: 60px auto 30px;
+    }
+    @include for-phone-only {
+      margin: 60px auto 30px;
+      padding: 30px 20px 0;
+      &__h3 {
+        font-size: 20px;
+        line-height: 30px;
+      }
+      &__label {
+        &::before {
+          left: 10px;
+        }
+      }
+      textarea,
+      input {
+        padding-left: 30px;
+      }
+    }
+  }
+  .accordion {
+    &__item {
+      @include for-tablet-portait-only {
+        margin-bottom: 40px;
+      }
+      @include for-phone-only {
+        margin-bottom: 30px;
+        padding-right: 0;
+        padding-left: 30px;
+      }
+    }
+    &__link {
+      @include for-phone-only {
+        font-size: 18px;
+        line-height: 30px;
+      }
+      &::before {
+        @include for-phone-only {
+          left: -30px;
+          top: 10px;
+        }
+      }
+    }
+    &__content {
+      @include for-phone-only {
+        transform: translateY(-10px);
+        padding-right: 20px;
+        font-size: 14px;
+        line-height: 25px;
+      }
+      &.in {
+        transform: translateY(5px);
+      }
+      &::before {
+        @include for-phone-only {
+          right: 0;
+        }
+      }
+    }
+  }
+}

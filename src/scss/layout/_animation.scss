@@ -1,0 +1,10 @@
+.faded {
+  transition: all 1.5s;
+  &.out {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  &_delay {
+    transition-delay: 0.6s;
+  }
+}
